@@ -33,15 +33,35 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
+#include <ESP8266WiFiMulti.h>
+#include "Adafruit_HDC1000.h"
+#include <Wire.h>
+
+Adafruit_HDC1000 hdc = Adafruit_HDC1000();
+ESP8266WiFiMulti wifiMulti;
+ESP8266WebServer server ( 80 );
+
+// Set SDA and SDL ports
+const int hdc_sda = 14;
+const int hdc_scl = 2;
+
+//float currentTempC = 0.00;
+//float currentTempF = 32.00;
+//float currentHumidity = 0.00;
 
 //const char *ssid = "@400SoAve#";
 //const char *password = "589ShU!$305";
-const char ssid[] = "theNile";
-const char password[] = "stereo!3";
-
-ESP8266WebServer server ( 80 );
+//const char ssid[] = "theNile";
+//const char password[] = "stereo!3";
 
 const int led = 16;
+
+void connectWiFi() {
+  if(wifiMulti.run() != WL_CONNECTED) {
+      Serial.println("WiFi not connected!");
+      delay(3000);
+  }
+}
 
 void handleRoot() {
 	digitalWrite ( led, 1 );
@@ -115,42 +135,79 @@ void drawUptimeGraph() {
   server.send ( 200, "image/svg+xml", out);
 }
 
+void handleTemperature() {
+  String out = "";
+  out += "[{\"currentTempC\":";
+  out += hdc.readTemperature();
+  out += "},{\"currentTempF\":";
+  out += hdc.readTemperature() * 9/5 + 32;
+  out += "}]";
+  server.send ( 200, "application/json", out );
+}
+
+void handleHumidity() {
+  String out = "";
+  out += "[{\"currentHumidity\":";
+  out += hdc.readHumidity();
+  out += "}]";
+  server.send ( 200, "application/json", out );
+}
+
 void setup ( void ) {
 	pinMode ( led, OUTPUT );
 	digitalWrite ( led, 0 );
 	Serial.begin ( 115200 );
-	WiFi.begin ( ssid, password );
-//	WiFi.begin ( ssid );
-	Serial.println ( "" );
+  
+//	WiFi.begin ( ssid, password );
+//	Serial.println ( "" );
+//
+//	// Wait for connection
+//	while ( WiFi.status() != WL_CONNECTED ) {
+//		delay ( 1000 );
+//		// Serial.print ( "Connecting...\n" );
+//
+//    Serial.print("Attempting to connect to SSID: ");
+//    Serial.println ( ssid );
+//
+//    Serial.print("Current WiFi Status: ");
+//    Serial.println ( WiFi.status() );
+//	}
+//
+//	Serial.println ( "" );
+//	Serial.print ( "Connected to " );
+//	Serial.println ( ssid );
+//	Serial.print ( "IP address: " );
+//	Serial.println ( WiFi.localIP() );
 
-	// Wait for connection
-	while ( WiFi.status() != WL_CONNECTED ) {
-		delay ( 1000 );
-		// Serial.print ( "Connecting...\n" );
+  delay(1000);
+  wifiMulti.addAP("theNile", "stereo!3");
+  wifiMulti.addAP("@400SoAve#", "589ShU!$305");
+//  wifiMulti.addAP("ssid_from_AP_3", "your_password_for_AP_3");
 
-    Serial.print("Attempting to connect to SSID: ");
-    Serial.println ( ssid );
+  Serial.println("Connecting Wifi...");
+  if(wifiMulti.run() == WL_CONNECTED) {
+    Serial.println("");
+    Serial.println("WiFi connected");
+    Serial.println("IP address: ");
+    Serial.println(WiFi.localIP());
+  }
 
-    Serial.print("Current WiFi Status: ");
-    Serial.println ( WiFi.status() );
-	}
+ if ( MDNS.begin ( "esp8266" ) ) {
+    Serial.println ( "MDNS responder started" );
+  }
+  
 
-	Serial.println ( "" );
-	Serial.print ( "Connected to " );
-	Serial.println ( ssid );
-	Serial.print ( "IP address: " );
-	Serial.println ( WiFi.localIP() );
-
-	if ( MDNS.begin ( "esp8266" ) ) {
-		Serial.println ( "MDNS responder started" );
-	}
-
-  setupMonitor();
+  Serial.println("Setting up HDC100x...");
+  Wire.begin(hdc_sda, hdc_scl);
+  if (!hdc.begin()) {
+    Serial.println("Couldn't find sensor!");
+    while (1);
+  }
   
 	server.on ( "/", handleRoot );
 	server.on ( "/uptime.svg", drawUptimeGraph );
-  server.on ( "/temp.svg", drawTempGraph );
-  server.on ( "/humidity.svg", drawHumidityGraph );
+//  server.on ( "/temp.svg", drawTempGraph );
+//  server.on ( "/humidity.svg", drawHumidityGraph );
   server.on ( "/temperature", handleTemperature );
   server.on ( "/humidity", handleHumidity );
 	server.on ( "/inline", []() {
@@ -162,7 +219,26 @@ void setup ( void ) {
 }
 
 void loop ( void ) {
-  readMonitors();
+  connectWiFi();
   server.handleClient();
+  
+//  Serial.print("Temp: "); 
+//  Serial.print(hdc.readTemperature());
+//  Serial.print("\t\tHum: "); 
+//  Serial.println(hdc.readHumidity());
+//  delay(1000);
+
+//  currentTempC = hdc.readTemperature();
+//  currentTempF = currentTempC * 9/5 + 32;
+//  currentHumidity = hdc.readHumidity();
+  
+  Serial.print("Temp: "); 
+  Serial.print(hdc.readTemperature());
+  Serial.print("C / ");
+  Serial.print(hdc.readTemperature() * 9/5 + 32);
+  Serial.print("F"); 
+  Serial.print("\tHum: "); 
+  Serial.println(hdc.readHumidity());
+  
   delay(5000);
 }
