@@ -1,8 +1,9 @@
-///*
-// *  This sketch trys to Connect to the best AP based on a given list
-// *
-// */
-//
+/*
+ *  This sketch trys to Connect to the best AP based on a given list
+ *
+ */
+
+//#include "Arduino.h"
 //#include <ESP8266WiFi.h>
 //#include <ESP8266WiFiMulti.h>
 //

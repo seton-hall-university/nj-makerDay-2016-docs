@@ -4,11 +4,38 @@
 
 Adafruit_HDC1000 hdc = Adafruit_HDC1000();
 
+// Set SDA and SDL ports
 const int hdc_sda = 14;
 const int hdc_scl = 2;
 
 float currentTempC = 0.00;
 float currentTempF = 32.00;
+
+void setupMonitor(void) {
+  Serial.println("Setting up HDC100x...");
+  Wire.begin(hdc_sda, hdc_scl);
+  if (!hdc.begin()) {
+    Serial.println("Couldn't find sensor!");
+    while (1);
+  } 
+}
+
+void readMonitors() {  
+//  Serial.print("Temp: "); Serial.print(hdc.readTemperature());
+//  Serial.print("\t\tHum: "); Serial.println(hdc.readHumidity());
+//  delay(1000);
+  currentTempC = hdc.readTemperature();
+  currentTempF = currentTempC * 9/5 + 32;
+  
+  Serial.print("Temp: "); 
+  Serial.print(currentTempC);
+  Serial.print("C / ");
+  Serial.print(currentTempF);
+  Serial.print("F"); 
+  Serial.print("\tHum: "); 
+  Serial.println(hdc.readHumidity());
+  delay(3000);
+}
 
 void drawTempGraph() {
  String out = "";
@@ -28,6 +55,16 @@ void drawTempGraph() {
   server.send ( 200, "image/svg+xml", out);
 }
 
+void handleTemperature() {
+  String out = "";
+  out += "[{\"currentTempC\":";
+  out += hdc.readTemperature();
+  out += "},{\"currentTempF\":";
+  out += hdc.readTemperature() * 9/5 + 32;
+  out += "}]";
+  server.send ( 200, "application/json", out );
+}
+
 void drawHumidityGraph() {
  String out = "";
   char humidity[100];
@@ -44,33 +81,4 @@ void drawHumidityGraph() {
   out += "</g>\n</svg>\n";
 
   server.send ( 200, "image/svg+xml", out);
-}
-
-void setupMonitor() {
-
-  Serial.println("HDC100x test");
-  // Set SDA and SDL ports
-  Wire.begin(hdc_sda, hdc_scl);
-  if (!hdc.begin()) {
-    Serial.println("Couldn't find sensor!");
-    while (1);
-  }
-  
-}
-
-void readMonitors() {  
-//  Serial.print("Temp: "); Serial.print(hdc.readTemperature());
-//  Serial.print("\t\tHum: "); Serial.println(hdc.readHumidity());
-//  delay(1000);
-  currentTempC = hdc.readTemperature();
-  currentTempF = currentTempC * 9/5 + 32;
-  
-  Serial.print("Temp: "); 
-  Serial.print(hdc.readTemperature());
-  Serial.print("C / ");
-  Serial.print(hdc.readTemperature() * 9/5 + 32);
-  Serial.print("F"); 
-  Serial.print("\tHum: "); 
-  Serial.println(hdc.readHumidity());
-  delay(3000);
 }
