@@ -68,7 +68,7 @@ void handleRoot() {
     <h2>Temp Graph</h2>\
     <img src=\"/temp.svg\" />\
     <h2>Humidity Graph</h2>\
-    <img src=\"/hum.svg\" />\
+    <img src=\"/humidity.svg\" />\
   </body>\
 </html>",
 
@@ -150,6 +150,7 @@ void setup ( void ) {
 	server.on ( "/", handleRoot );
 	server.on ( "/uptime.svg", drawUptimeGraph );
   server.on ( "/temp.svg", drawTempGraph );
+  server.on ( "/humidity.svg", drawHumidityGraph );
 	server.on ( "/inline", []() {
 		server.send ( 200, "text/plain", "this works as well" );
 	} );
