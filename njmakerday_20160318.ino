@@ -49,19 +49,12 @@ const int hdc_scl = 2;
 //float currentTempF = 32.00;
 //float currentHumidity = 0.00;
 
-//const char *ssid = "@400SoAve#";
-//const char *password = "589ShU!$305";
+const char *ssid = "@400SoAve#";
+const char *password = "589ShU!$305";
 //const char ssid[] = "theNile";
 //const char password[] = "stereo!3";
 
 const int led = 16;
-
-void connectWiFi() {
-  if(wifiMulti.run() != WL_CONNECTED) {
-      Serial.println("WiFi not connected!");
-      delay(3000);
-  }
-}
 
 void handleRoot() {
 	digitalWrite ( led, 1 );
@@ -155,42 +148,30 @@ void handleHumidity() {
 
 void setup ( void ) {
 	pinMode ( led, OUTPUT );
-	digitalWrite ( led, 0 );
 	Serial.begin ( 115200 );
   
-//	WiFi.begin ( ssid, password );
-//	Serial.println ( "" );
-//
-//	// Wait for connection
-//	while ( WiFi.status() != WL_CONNECTED ) {
-//		delay ( 1000 );
-//		// Serial.print ( "Connecting...\n" );
-//
-//    Serial.print("Attempting to connect to SSID: ");
-//    Serial.println ( ssid );
-//
-//    Serial.print("Current WiFi Status: ");
-//    Serial.println ( WiFi.status() );
-//	}
-//
-//	Serial.println ( "" );
-//	Serial.print ( "Connected to " );
-//	Serial.println ( ssid );
-//	Serial.print ( "IP address: " );
-//	Serial.println ( WiFi.localIP() );
+	WiFi.begin ( ssid, password );
+	Serial.println ( "" );
 
-  delay(1000);
-  wifiMulti.addAP("theNile", "stereo!3");
-  wifiMulti.addAP("@400SoAve#", "589ShU!$305");
-//  wifiMulti.addAP("ssid_from_AP_3", "your_password_for_AP_3");
+	// Wait for connection
+	while ( WiFi.status() != WL_CONNECTED ) {
+    digitalWrite ( led, 0 );
+		delay ( 1000 );
+		// Serial.print ( "Connecting...\n" );
 
-  Serial.println("Connecting Wifi...");
-  if(wifiMulti.run() == WL_CONNECTED) {
-    Serial.println("");
-    Serial.println("WiFi connected");
-    Serial.println("IP address: ");
-    Serial.println(WiFi.localIP());
-  }
+    Serial.print("Attempting to connect to SSID: ");
+    Serial.println ( ssid );
+
+    Serial.print("Current WiFi Status: ");
+    Serial.println ( WiFi.status() );
+	}
+
+  digitalWrite ( led, 1 );
+  Serial.println ( "" );
+	Serial.print ( "Connected to " );
+	Serial.println ( ssid );
+	Serial.print ( "IP address: " );
+	Serial.println ( WiFi.localIP() );
 
  if ( MDNS.begin ( "esp8266" ) ) {
     Serial.println ( "MDNS responder started" );
@@ -219,7 +200,6 @@ void setup ( void ) {
 }
 
 void loop ( void ) {
-  connectWiFi();
   server.handleClient();
   
 //  Serial.print("Temp: "); 
