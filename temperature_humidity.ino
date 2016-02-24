@@ -82,3 +82,11 @@ void drawHumidityGraph() {
 
   server.send ( 200, "image/svg+xml", out);
 }
+
+void handleHumidity() {
+  String out = "";
+  out += "[{\"currentHumidity\":";
+  out += hdc.readHumidity();
+  out += "}]";
+  server.send ( 200, "application/json", out );
+}

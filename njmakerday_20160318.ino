@@ -152,6 +152,7 @@ void setup ( void ) {
   server.on ( "/temp.svg", drawTempGraph );
   server.on ( "/humidity.svg", drawHumidityGraph );
   server.on ( "/temperature", handleTemperature );
+  server.on ( "/humidity", handleHumidity );
 	server.on ( "/inline", []() {
 		server.send ( 200, "text/plain", "this works as well" );
 	} );
