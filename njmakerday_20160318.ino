@@ -33,8 +33,6 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
-//#include "Adafruit_HDC1000.h"
-//#include <Wire.h>
 
 //const char *ssid = "@400SoAve#";
 //const char *password = "589ShU!$305";
@@ -42,11 +40,8 @@ const char ssid[] = "theNile";
 const char password[] = "stereo!3";
 
 ESP8266WebServer server ( 80 );
-//Adafruit_HDC1000 hdc = Adafruit_HDC1000();
 
 const int led = 16;
-//const int hdc_sda = 14;
-//const int hdc_scl = 2;
 
 void handleRoot() {
 	digitalWrite ( led, 1 );
