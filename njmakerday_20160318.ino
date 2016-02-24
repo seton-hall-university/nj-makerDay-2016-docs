@@ -45,12 +45,12 @@ const int led = 16;
 
 void handleRoot() {
 	digitalWrite ( led, 1 );
-	char temp[400];
+	char temp[600];
 	int sec = millis() / 1000;
 	int min = sec / 60;
 	int hr = min / 60;
 
-	snprintf ( temp, 400,
+	snprintf ( temp, 600,
 
 "<html>\
   <head>\
@@ -160,6 +160,7 @@ void setup ( void ) {
 }
 
 void loop ( void ) {
-	server.handleClient();
   readMonitors();
+  server.handleClient();
+  delay(5000);
 }
