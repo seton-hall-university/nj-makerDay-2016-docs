@@ -44,12 +44,6 @@ void handleRoot() {
   <body>\
     <h1>Hello from ESP8266!</h1>\
     <p>Uptime: %02d:%02d:%02d</p>\
-    <h2>Uptime Graph</h2>\
-    <img src=\"/uptime.svg\" />\
-    <h2>Temp Graph</h2>\
-    <img src=\"/temp.svg\" />\
-    <h2>Humidity Graph</h2>\
-    <img src=\"/humidity.svg\" />\
   </body>\
 </html>",
 
@@ -76,24 +70,6 @@ void handleNotFound() {
 
 	server.send ( 404, "text/plain", message );
 	digitalWrite ( ledWiFi, 0 );
-}
-
-void drawUptimeGraph() {
- String out = "";
-  char uptime[100];
-  out += "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"400\" height=\"150\">\n";
-  out += "<rect width=\"400\" height=\"150\" fill=\"rgb(250, 230, 210)\" stroke-width=\"1\" stroke=\"rgb(0, 0, 0)\" />\n";
-  out += "<g stroke=\"black\">\n";
-  int y = rand() % 130;
-  for (int x = 10; x < 390; x+= 10) {
-    int y2 = rand() % 130;
-    sprintf(uptime, "<line x1=\"%d\" y1=\"%d\" x2=\"%d\" y2=\"%d\" stroke-width=\"1\" />\n", x, 140 - y, x + 10, 140 - y2);
-    out += uptime;
-    y = y2;
-  }
-  out += "</g>\n</svg>\n";
-
-  server.send ( 200, "image/svg+xml", out);
 }
 
 void handleTemperature() {
@@ -154,9 +130,6 @@ void setup ( void ) {
   }
   
 	server.on ( "/", handleRoot );
-	server.on ( "/uptime.svg", drawUptimeGraph );
-//  server.on ( "/temp.svg", drawTempGraph );
-//  server.on ( "/humidity.svg", drawHumidityGraph );
   server.on ( "/temperature", handleTemperature );
   server.on ( "/humidity", handleHumidity );
 	server.on ( "/inline", []() {
