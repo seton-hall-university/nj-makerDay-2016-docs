@@ -21,6 +21,7 @@ const char *password = "589ShU!$305";
 //const char ssid[] = "theNile";
 //const char password[] = "stereo!3";
 
+const char *dnsName = "esp8266-lee";
 // Set which LEDs are going to be used.
 const int ledWiFi = 16;
 
@@ -117,7 +118,7 @@ void setup ( void ) {
 	Serial.print ( "IP address: " );
 	Serial.println ( WiFi.localIP() );
 
- if ( MDNS.begin ( "esp8266" ) ) {
+ if ( MDNS.begin ( dnsName ) ) {
     Serial.println ( "MDNS responder started" );
   }
   
