@@ -17,9 +17,9 @@ const int hdc_scl = 2;
 
 // Set WiFi constants
 //const char *ssid = "@400SoAve#";
-//const char *password = "";
+//const char *password = "589ShU!$305";
 const char *ssid = "theNile";
-const char *password = "";
+const char *password = "stereo!3";
 const char *dnsName = "esp8266-lee";
 
 // Set which LEDs are going to be used.
@@ -41,7 +41,7 @@ WiFiClient client;
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883
 #define AIO_USERNAME    "ProfeC"
-#define AIO_KEY         ""
+#define AIO_KEY         "d85b8f1095d5f17816b3178be9e1ed7ea4e199df"
 #define FEED_PATH_TEMPC AIO_USERNAME "/feeds/temperature-c";
 #define FEED_PATH_TEMPF AIO_USERNAME "/feeds/temperature-f";
 #define FEED_PATH_HUMIDITY AIO_USERNAME "/feeds/humidity";
