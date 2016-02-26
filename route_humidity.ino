@@ -3,8 +3,8 @@
 
 void handleHumidity() {
   String out = "";
-  out += "[{\"currentHumidity\":";
+  out += "{\"humidity\":{\"relative\":";
   out += hdc.readHumidity();
-  out += "}]";
+  out += "}}";
   server.send ( 200, "application/json", out );
 }
