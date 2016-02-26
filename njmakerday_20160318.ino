@@ -12,16 +12,24 @@
 Adafruit_HDC1000 hdc = Adafruit_HDC1000();
 ESP8266WebServer server ( 80 );
 
-// Set SDA and SDL ports for teh HDC1000
+// Set SDA and SDL ports for the HDC1000
 const int hdc_sda = 14;
 const int hdc_scl = 2;
+
+// Set pin for the LDR
+const int ldr = 9;
+
+// Set pins for the Common Cathod RGB LED
+const int rLED = 12;
+const int gLED = 13;
+const int bLED = 15;
 
 // Set WiFi constants
 //const char *ssid = "@400SoAve#";
 //const char *password = "589ShU!$305";
 const char *ssid = "theNile";
 const char *password = "stereo!3";
-const char *dnsName = "esp8266-lee";
+const char *dnsName = "esp8266-lee.local";
 
 // Set which LEDs are going to be used.
 const int ledWiFi = 16;
@@ -30,7 +38,8 @@ float temperature_data = 0.000;
 float humidity_data = 0.000;
 
 // Functions
-void connect();
+void connectMQTT();
+void connectWiFi();
 void handleRoot();
 void handleNotFound();
 void handleTemperature();
@@ -76,35 +85,38 @@ void setup ( void ) {
 	pinMode ( ledWiFi, OUTPUT );
 	Serial.begin ( 115200 );
   
-	WiFi.begin ( ssid, password );
-	Serial.println ( "" );
-
-	// Wait for connection
-	while ( WiFi.status() != WL_CONNECTED ) {
-    digitalWrite ( ledWiFi, 0 );
-		delay ( 1000 );
-		// Serial.print ( "Connecting...\n" );
-
-    Serial.print("Attempting to connect to SSID: ");
-    Serial.println ( ssid );
-
-    Serial.print("Current WiFi Status: ");
-    Serial.println ( WiFi.status() );
-	}
+  // Connect to Wifi
+  void connect_wifi();
+  
+//	WiFi.begin ( ssid, password );
+//	Serial.println ( "" );
+//
+//	// Wait for connection
+//	while ( WiFi.status() != WL_CONNECTED ) {
+//    digitalWrite ( ledWiFi, 0 );
+//		delay ( 1000 );
+//		// Serial.print ( "Connecting...\n" );
+//
+//    Serial.print("Attempting to connect to SSID: ");
+//    Serial.println ( ssid );
+//
+//    Serial.print("Current WiFi Status: ");
+//    Serial.println ( WiFi.status() );
+//	}
 
   // connect to adafruit io
-  connect();
+  connectMQTT();
 
-  digitalWrite ( ledWiFi, 1 );
-  Serial.println ( "" );
-	Serial.print ( "Connected to " );
-	Serial.println ( ssid );
-	Serial.print ( "IP address: " );
-	Serial.println ( WiFi.localIP() );
-
- if ( MDNS.begin ( dnsName ) ) {
-    Serial.println ( "MDNS responder started" );
-  }
+//  digitalWrite ( ledWiFi, 1 );
+//  Serial.println ( "" );
+//	Serial.print ( "Connected to " );
+//	Serial.println ( ssid );
+//	Serial.print ( "IP address: " );
+//	Serial.println ( WiFi.localIP() );
+//
+// if ( MDNS.begin ( dnsName ) ) {
+//    Serial.println ( "MDNS responder started" );
+//  }
   
 
   Serial.println("Setting up HDC100x...");
@@ -155,97 +167,98 @@ void loop ( void ) {
     Serial.println(F("Humidity published!"));
   
 //  delay(180000); // 3 minutes
+  digitalWrite ( ledWiFi, 0 );
   delay(30000); // 30 seconds
 }
 
-// connect to adafruit io via MQTT
-void connect() {
+//// connect to adafruit io via MQTT
+//void connect() {
+//
+//  Serial.print(F("Connecting to Adafruit IO... "));
+//
+//  int8_t ret;
+//
+//  while ((ret = mqtt.connect()) != 0) {
+//
+//    switch (ret) {
+//      case 1: Serial.println(F("Wrong protocol")); break;
+//      case 2: Serial.println(F("ID rejected")); break;
+//      case 3: Serial.println(F("Server unavail")); break;
+//      case 4: Serial.println(F("Bad user/pass")); break;
+//      case 5: Serial.println(F("Not authed")); break;
+//      case 6: Serial.println(F("Failed to subscribe")); break;
+//      default: Serial.println(F("Connection failed")); break;
+//    }
+//
+//    if(ret >= 0)
+//      mqtt.disconnect();
+//
+//    Serial.println(F("Retrying connection..."));
+//    delay(5000);
+//
+//  }
+//
+//  Serial.println(F("Adafruit IO Connected!"));
+//
+//}
 
-  Serial.print(F("Connecting to Adafruit IO... "));
+//void handleRoot() {
+// digitalWrite ( ledWiFi, 1 );
+//  char temp[600];
+//  int sec = millis() / 1000;
+//  int min = sec / 60;
+//  int hr = min / 60;
+//
+//  snprintf ( temp, 600,
+//
+//"<html>\
+//  <head>\
+//    <meta http-equiv='refresh' content='5'/>\
+//    <title>ESP8266 Demo</title>\
+//    <style>\
+//      body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
+//    </style>\
+//  </head>\
+//  <body>\
+//    <h1>Hello from ESP8266!</h1>\
+//    <p>Uptime: %02d:%02d:%02d</p>\
+//  </body>\
+//</html>",
+//
+//    hr, min % 60, sec % 60
+//  );
+//  server.send ( 200, "text/html", temp );
+//  digitalWrite ( ledWiFi, 0 );
+//}
 
-  int8_t ret;
+//void handleNotFound() {
+//  digitalWrite ( ledWiFi, 1 );
+//  String message = "File Not Found\n\n";
+//  message += "URI: ";
+//  message += server.uri();
+//  message += "\nMethod: ";
+//  message += ( server.method() == HTTP_GET ) ? "GET" : "POST";
+//  message += "\nArguments: ";
+//  message += server.args();
+//  message += "\n";
+//
+//  for ( uint8_t i = 0; i < server.args(); i++ ) {
+//    message += " " + server.argName ( i ) + ": " + server.arg ( i ) + "\n";
+//  }
+//
+//  server.send ( 404, "text/plain", message );
+//  digitalWrite ( ledWiFi, 0 );
+//}
 
-  while ((ret = mqtt.connect()) != 0) {
-
-    switch (ret) {
-      case 1: Serial.println(F("Wrong protocol")); break;
-      case 2: Serial.println(F("ID rejected")); break;
-      case 3: Serial.println(F("Server unavail")); break;
-      case 4: Serial.println(F("Bad user/pass")); break;
-      case 5: Serial.println(F("Not authed")); break;
-      case 6: Serial.println(F("Failed to subscribe")); break;
-      default: Serial.println(F("Connection failed")); break;
-    }
-
-    if(ret >= 0)
-      mqtt.disconnect();
-
-    Serial.println(F("Retrying connection..."));
-    delay(5000);
-
-  }
-
-  Serial.println(F("Adafruit IO Connected!"));
-
-}
-
-void handleRoot() {
- digitalWrite ( ledWiFi, 1 );
-  char temp[600];
-  int sec = millis() / 1000;
-  int min = sec / 60;
-  int hr = min / 60;
-
-  snprintf ( temp, 600,
-
-"<html>\
-  <head>\
-    <meta http-equiv='refresh' content='5'/>\
-    <title>ESP8266 Demo</title>\
-    <style>\
-      body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
-    </style>\
-  </head>\
-  <body>\
-    <h1>Hello from ESP8266!</h1>\
-    <p>Uptime: %02d:%02d:%02d</p>\
-  </body>\
-</html>",
-
-    hr, min % 60, sec % 60
-  );
-  server.send ( 200, "text/html", temp );
-  digitalWrite ( ledWiFi, 0 );
-}
-
-void handleNotFound() {
-  digitalWrite ( ledWiFi, 1 );
-  String message = "File Not Found\n\n";
-  message += "URI: ";
-  message += server.uri();
-  message += "\nMethod: ";
-  message += ( server.method() == HTTP_GET ) ? "GET" : "POST";
-  message += "\nArguments: ";
-  message += server.args();
-  message += "\n";
-
-  for ( uint8_t i = 0; i < server.args(); i++ ) {
-    message += " " + server.argName ( i ) + ": " + server.arg ( i ) + "\n";
-  }
-
-  server.send ( 404, "text/plain", message );
-  digitalWrite ( ledWiFi, 0 );
-}
-
-void handleTemperature() {
-  String out = "";
-  out += "[{\"currentTempC\":";
-  out += hdc.readTemperature();
-  out += "},{\"currentTempF\":";
-  out += hdc.readTemperature() * 9/5 + 32;
-  out += "}]";
-  server.send ( 200, "application/json", out );
-}
+//void handleTemperature() {
+//  String out = "";
+//  out += "[{\"currentTempC\":";
+//  out += hdc.readTemperature();
+//  out += "},{\"currentTempF\":";
+//  out += hdc.readTemperature() * 9/5 + 32;
+//  out += "}]";
+//  server.send ( 200, "application/json", out );
+//}
 
 //void handleHumidity() {
 //  String out = "";
