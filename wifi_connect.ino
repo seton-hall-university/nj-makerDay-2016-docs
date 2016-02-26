@@ -22,10 +22,18 @@ void connectWiFi() {
   Serial.println ( "" );
   Serial.print ( "Connected to " );
   Serial.println ( ssid );
-  Serial.print ( "IP address: " );
-  Serial.println ( WiFi.localIP() );
+  getWiFiAddress();
   
   if ( MDNS.begin ( dnsName ) ) {
     Serial.println ( "MDNS responder started" );
   }
 }
+
+char getWiFiAddress(void) {
+  // Print the IP address out to the serial connection
+  Serial.print ( "\n\nIP address: " );
+  Serial.println ( WiFi.localIP() );
+
+  return WiFi.localIP();
+}
+
