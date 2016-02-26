@@ -1,6 +1,20 @@
 // Libraries
 #include "Arduino.h"
 
+float getTempCelsius(void) {
+  return hdc.readTemperature();
+}
+
+float getTempFahrenheit(void) {
+  float currentTemp = hdc.readTemperature();
+  return currentTemp * 9/5 + 32;
+}
+
+float getTempKelvin(void) {
+  float currentTemp = hdc.readTemperature();
+  return currentTemp + 273.15;
+}
+
 void handleTemperature() {
   float currentTemp = hdc.readTemperature();
   String out = "";

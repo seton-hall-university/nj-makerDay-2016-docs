@@ -42,10 +42,10 @@ void handleRoot();
 void handleNotFound();
 void handleTemperature();
 void handleHumidity();
-int getTempCelsius(void);
-int getTempFahrenheit(void);
-int getTempKelvin(void);
-int getHumidityRH(void);
+float getTempCelsius(void);
+float getTempFahrenheit(void);
+float getTempKelvin(void);
+float getHumidityRH(void);
 
 // Create an ESP8266 WiFiClient class.
 WiFiClient client;
