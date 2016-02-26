@@ -89,28 +89,6 @@ void setup ( void ) {
   
   // Connect to Wifi
   void connectWiFi();
-  
-//	WiFi.begin ( ssid, password );
-//	Serial.println ( "" );
-//
-//	// Wait for connection
-//	while ( WiFi.status() != WL_CONNECTED ) {
-//    digitalWrite ( ledWiFi, 0 );
-//		delay ( 1000 );
-//    Serial.print ( "Connecting...\n" );
-//
-//    Serial.print("Attempting to connect to SSID: ");
-//    Serial.println ( ssid );
-//
-//    Serial.print("Current WiFi Status: ");
-//    Serial.println ( WiFi.status() );
-//	}
-//
-//  Serial.println ( "" );
-//	Serial.print ( "Connected to " );
-//	Serial.println ( ssid );
-//	Serial.print ( "IP address: " );
-//	Serial.println ( WiFi.localIP() );
 
   // connect to adafruit io
   mqttConnect();
@@ -155,121 +133,10 @@ void loop ( void ) {
   Serial.println(humidity_data);
 
   // Publish data
-  mqttPublish();
-//  if (! temperature_c.publish(temperature_data))
-//    Serial.println(F("Failed to publish temperature"));
-//  else
-//    Serial.println(F("C Temperature published!"));
-//    
-//  if (! temperature_f.publish(temperature_data * 9/5 + 32))
-//    Serial.println(F("Failed to publish temperature"));
-//  else
-//    Serial.println(F("F Temperature published!"));
-//
-//  if (! humidity.publish(humidity_data))
-//    Serial.println(F("Failed to publish humidity"));
-//  else
-//    Serial.println(F("Humidity published!"));
-//  
+//  mqttPublish();
+
 //  delay(180000); // 3 minutes
   digitalWrite ( ledWiFi, 1 );
 //  delay(30000); // 30 seconds
 }
-
-//// connect to adafruit io via MQTT
-//void connect() {
-//
-//  Serial.print(F("Connecting to Adafruit IO... "));
-//
-//  int8_t ret;
-//
-//  while ((ret = mqtt.connect()) != 0) {
-//
-//    switch (ret) {
-//      case 1: Serial.println(F("Wrong protocol")); break;
-//      case 2: Serial.println(F("ID rejected")); break;
-//      case 3: Serial.println(F("Server unavail")); break;
-//      case 4: Serial.println(F("Bad user/pass")); break;
-//      case 5: Serial.println(F("Not authed")); break;
-//      case 6: Serial.println(F("Failed to subscribe")); break;
-//      default: Serial.println(F("Connection failed")); break;
-//    }
-//
-//    if(ret >= 0)
-//      mqtt.disconnect();
-//
-//    Serial.println(F("Retrying connection..."));
-//    delay(5000);
-//
-//  }
-//
-//  Serial.println(F("Adafruit IO Connected!"));
-//
-//}
-
-//void handleRoot() {
-// digitalWrite ( ledWiFi, 1 );
-//  char temp[600];
-//  int sec = millis() / 1000;
-//  int min = sec / 60;
-//  int hr = min / 60;
-//
-//  snprintf ( temp, 600,
-//
-//"<html>\
-//  <head>\
-//    <meta http-equiv='refresh' content='5'/>\
-//    <title>ESP8266 Demo</title>\
-//    <style>\
-//      body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
-//    </style>\
-//  </head>\
-//  <body>\
-//    <h1>Hello from ESP8266!</h1>\
-//    <p>Uptime: %02d:%02d:%02d</p>\
-//  </body>\
-//</html>",
-//
-//    hr, min % 60, sec % 60
-//  );
-//  server.send ( 200, "text/html", temp );
-//  digitalWrite ( ledWiFi, 0 );
-//}
-
-//void handleNotFound() {
-//  digitalWrite ( ledWiFi, 1 );
-//  String message = "File Not Found\n\n";
-//  message += "URI: ";
-//  message += server.uri();
-//  message += "\nMethod: ";
-//  message += ( server.method() == HTTP_GET ) ? "GET" : "POST";
-//  message += "\nArguments: ";
-//  message += server.args();
-//  message += "\n";
-//
-//  for ( uint8_t i = 0; i < server.args(); i++ ) {
-//    message += " " + server.argName ( i ) + ": " + server.arg ( i ) + "\n";
-//  }
-//
-//  server.send ( 404, "text/plain", message );
-//  digitalWrite ( ledWiFi, 0 );
-//}
-
-//void handleTemperature() {
-//  String out = "";
-//  out += "[{\"currentTempC\":";
-//  out += hdc.readTemperature();
-//  out += "},{\"currentTempF\":";
-//  out += hdc.readTemperature() * 9/5 + 32;
-//  out += "}]";
-//  server.send ( 200, "application/json", out );
-//}
-
-//void handleHumidity() {
-//  String out = "";
-//  out += "[{\"currentHumidity\":";
-//  out += hdc.readHumidity();
-//  out += "}]";
-//  server.send ( 200, "application/json", out );
-//}
 
