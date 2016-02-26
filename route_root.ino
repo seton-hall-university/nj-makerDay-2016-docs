@@ -27,5 +27,5 @@ void handleRoot() {
     hr, min % 60, sec % 60
   );
   server.send ( 200, "text/html", temp );
-  digitalWrite ( ledWiFi, 0 );
+//  digitalWrite ( ledWiFi, 0 );
 }

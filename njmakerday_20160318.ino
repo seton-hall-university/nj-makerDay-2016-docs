@@ -20,9 +20,12 @@ const int hdc_scl = 2;
 const int ldr = 9;
 
 // Set pins for the Common Cathod RGB LED
-const int rLED = 12;
-const int gLED = 13;
-const int bLED = 15;
+const int ledRed = 12;
+const int ledGreen = 13;
+const int ledBlue = 15;
+
+// Set which LEDs are going to be used.
+const int ledWiFi = 16;
 
 // Set WiFi constants
 //const char *ssid = "@400SoAve#";
@@ -31,15 +34,13 @@ const char *ssid = "theNile";
 const char *password = "stereo!3";
 const char *dnsName = "esp8266-lee.local";
 
-// Set which LEDs are going to be used.
-const int ledWiFi = 16;
-
 float temperature_data = 0.000;
 float humidity_data = 0.000;
 
 // Functions
-void connectMQTT();
 void connectWiFi();
+void mqttConnect();
+void mqttPublish();
 void handleRoot();
 void handleNotFound();
 void handleTemperature();
@@ -83,10 +84,11 @@ Adafruit_MQTT_Publish humidity = Adafruit_MQTT_Publish(&mqtt, HUMIDITY_FEED);
 /*************************** Sketch Code ************************************/
 void setup ( void ) {
 	pinMode ( ledWiFi, OUTPUT );
-	Serial.begin ( 115200 );
+//  digitalWrite ( ledWiFi, 1 );
+  Serial.begin ( 115200 );
   
   // Connect to Wifi
-  void connect_wifi();
+  void connectWiFi();
   
 //	WiFi.begin ( ssid, password );
 //	Serial.println ( "" );
@@ -95,7 +97,7 @@ void setup ( void ) {
 //	while ( WiFi.status() != WL_CONNECTED ) {
 //    digitalWrite ( ledWiFi, 0 );
 //		delay ( 1000 );
-//		// Serial.print ( "Connecting...\n" );
+//    Serial.print ( "Connecting...\n" );
 //
 //    Serial.print("Attempting to connect to SSID: ");
 //    Serial.println ( ssid );
@@ -103,20 +105,19 @@ void setup ( void ) {
 //    Serial.print("Current WiFi Status: ");
 //    Serial.println ( WiFi.status() );
 //	}
-
-  // connect to adafruit io
-  connectMQTT();
-
-//  digitalWrite ( ledWiFi, 1 );
+//
 //  Serial.println ( "" );
 //	Serial.print ( "Connected to " );
 //	Serial.println ( ssid );
 //	Serial.print ( "IP address: " );
 //	Serial.println ( WiFi.localIP() );
-//
-// if ( MDNS.begin ( dnsName ) ) {
-//    Serial.println ( "MDNS responder started" );
-//  }
+
+  // connect to adafruit io
+  mqttConnect();
+
+ if ( MDNS.begin ( dnsName ) ) {
+    Serial.println ( "MDNS responder started" );
+  }
   
 
   Serial.println("Setting up HDC100x...");
@@ -135,9 +136,12 @@ void setup ( void ) {
 	server.onNotFound ( handleNotFound );
 	server.begin();
 	Serial.println ( "HTTP server started" );
+ 
+//  digitalWrite ( ledWiFi, 0 );
 }
 
 void loop ( void ) {
+  digitalWrite ( ledWiFi, 0 );
   server.handleClient();
   temperature_data = hdc.readTemperature();
   humidity_data = hdc.readHumidity();
@@ -151,24 +155,25 @@ void loop ( void ) {
   Serial.println(humidity_data);
 
   // Publish data
-  if (! temperature_c.publish(temperature_data))
-    Serial.println(F("Failed to publish temperature"));
-  else
-    Serial.println(F("C Temperature published!"));
-    
-  if (! temperature_f.publish(temperature_data * 9/5 + 32))
-    Serial.println(F("Failed to publish temperature"));
-  else
-    Serial.println(F("F Temperature published!"));
-
-  if (! humidity.publish(humidity_data))
-    Serial.println(F("Failed to publish humidity"));
-  else
-    Serial.println(F("Humidity published!"));
-  
+  mqttPublish();
+//  if (! temperature_c.publish(temperature_data))
+//    Serial.println(F("Failed to publish temperature"));
+//  else
+//    Serial.println(F("C Temperature published!"));
+//    
+//  if (! temperature_f.publish(temperature_data * 9/5 + 32))
+//    Serial.println(F("Failed to publish temperature"));
+//  else
+//    Serial.println(F("F Temperature published!"));
+//
+//  if (! humidity.publish(humidity_data))
+//    Serial.println(F("Failed to publish humidity"));
+//  else
+//    Serial.println(F("Humidity published!"));
+//  
 //  delay(180000); // 3 minutes
-  digitalWrite ( ledWiFi, 0 );
-  delay(30000); // 30 seconds
+  digitalWrite ( ledWiFi, 1 );
+//  delay(30000); // 30 seconds
 }
 
 //// connect to adafruit io via MQTT

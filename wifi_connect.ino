@@ -9,7 +9,7 @@ void connectWiFi() {
   while ( WiFi.status() != WL_CONNECTED ) {
     digitalWrite ( ledWiFi, 0 );
     delay ( 1000 );
-    // Serial.print ( "Connecting...\n" );
+     Serial.print ( "Connecting...\n" );
 
     Serial.print("Attempting to connect to SSID: ");
     Serial.println ( ssid );
