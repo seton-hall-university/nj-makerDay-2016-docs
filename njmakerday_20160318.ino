@@ -28,17 +28,18 @@ const int ledBlue = 15;
 const int ledWiFi = 16;
 
 // Set WiFi constants
-//const char *ssid = "@400SoAve#";
-//const char *password = "589ShU!$305";
-const char *ssid = "theNile";
-const char *password = "stereo!3";
-const char *dnsName = "esp8266-lee.local";
+const char *ssid = "@400SoAve#";
+const char *password = "589ShU!$305";
+//const char *ssid = "theNile";
+//const char *password = "stereo!3";
+const char *dnsName = "esp8266-lee";
 
-float temperature_data = 0.000;
-float humidity_data = 0.000;
+float currentTemp = 0.000;
+float currentHumidity = 0.000;
 
 // Functions
 void connectWiFi();
+char getWiFiAddress(void);
 void mqttConnect();
 void mqttPublish();
 void handleRoot();
@@ -88,16 +89,11 @@ void setup ( void ) {
   Serial.begin ( 115200 );
   
   // Connect to Wifi
-  void connectWiFi();
+  connectWiFi();
 
   // connect to adafruit io
-  mqttConnect();
-
- if ( MDNS.begin ( dnsName ) ) {
-    Serial.println ( "MDNS responder started" );
-  }
+//  mqttConnect();
   
-
   Serial.println("Setting up HDC100x...");
   Wire.begin(hdc_sda, hdc_scl);
   if (!hdc.begin()) {
@@ -107,6 +103,9 @@ void setup ( void ) {
   
 	server.on ( "/", handleRoot );
   server.on ( "/temperature", handleTemperature );
+  server.on ( "/temperature/celsius", handleTemperatureC );
+  server.on ( "/temperature/fahrenheit", handleTemperatureF );
+  server.on ( "/temperature/kelvin", handleTemperatureK );
   server.on ( "/humidity", handleHumidity );
 	server.on ( "/inline", []() {
 		server.send ( 200, "text/plain", "this works as well" );
@@ -119,24 +118,28 @@ void setup ( void ) {
 }
 
 void loop ( void ) {
-  digitalWrite ( ledWiFi, 0 );
+//  digitalWrite ( ledWiFi, 0 );
   server.handleClient();
-  temperature_data = hdc.readTemperature();
-  humidity_data = hdc.readHumidity();
+  
+  getWiFiAddress();
+  
+  float currentTemp = hdc.readTemperature();
+  float currentHumidity = hdc.readHumidity();
   
   Serial.print("Temp: "); 
-  Serial.print(temperature_data);
+  Serial.print(currentTemp);
   Serial.print("C / ");
-  Serial.print(temperature_data * 9/5 + 32);
+  Serial.print(currentTemp * 9/5 + 32);
   Serial.print("F"); 
   Serial.print("\tHum: "); 
-  Serial.println(humidity_data);
+  Serial.println(currentHumidity);
 
   // Publish data
 //  mqttPublish();
 
+//  digitalWrite ( ledWiFi, 1 );
 //  delay(180000); // 3 minutes
-  digitalWrite ( ledWiFi, 1 );
 //  delay(30000); // 30 seconds
+  delay(500); // .5 seconds
 }
 
