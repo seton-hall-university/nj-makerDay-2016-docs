@@ -1,39 +1,32 @@
 // Libraries
 #include "Arduino.h"
 #include <ESP8266WiFi.h>
+#include <ESP8266WiFiMulti.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 #include "Adafruit_HDC1000.h"
 #include <Wire.h>
 
-Adafruit_HDC1000 hdc = Adafruit_HDC1000();
-ESP8266WebServer server ( 80 );
+Adafruit_HDC1000 hdc = Adafruit_HDC1000(); // Create a class for the HDC Sensor
+ESP8266WebServer server ( 80 ); // Create an ESP8266 Server class
+WiFiClient client; // Create an ESP8266 WiFiClient class.
 
-// Set SDA and SDL ports for the HDC1000
-const int hdc_sda = 14;
-const int hdc_scl = 2;
-
-// Set pin for the LDR
-const int ldr = 9;
-
-// Set pins for the Common Cathod RGB LED
-const int ledRed = 12;
-const int ledGreen = 13;
-const int ledBlue = 15;
-
-// Set which LEDs are going to be used.
-const int ledWiFi = 16;
+// Program Variables
+bool debug = 0; // Debug mode allows printing to the serial port.
+const int hdc_sda = 14; // SDA port for the HDC1000
+const int hdc_scl = 2; // SCL port for the HDC1000
+const int ldr = 9; // Set pin for the LDR
+const int ledWiFi = 16; // LEDs are going to be used.
+const char *dnsName = "esp8266-lee"; // DNS Name
+float currentTemp = 0.000;
+float currentHumidity = 0.000;
 
 // Set WiFi constants
 const char *ssid = "@400SoAve#";
 const char *password = "589ShU!$305";
 //const char *ssid = "theNile";
 //const char *password = "stereo!3";
-const char *dnsName = "esp8266-lee";
-
-float currentTemp = 0.000;
-float currentHumidity = 0.000;
 
 // Functions
 void connectWiFi();
@@ -47,10 +40,7 @@ float getTempFahrenheit(void);
 float getTempKelvin(void);
 float getHumidityRH(void);
 
-// Create an ESP8266 WiFiClient class.
-WiFiClient client;
-
-/*************************** Sketch Code ************************************/
+// Sketch Code
 void setup ( void ) {
 	pinMode ( ledWiFi, OUTPUT );
 //  digitalWrite ( ledWiFi, 1 );
