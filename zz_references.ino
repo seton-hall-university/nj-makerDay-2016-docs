@@ -8,4 +8,5 @@
  * Humidity Information => https://en.wikipedia.org/wiki/Humidity
  * Temperature Information => https://en.wikipedia.org/wiki/Category:Units_of_temperature
  * Converting floats to decimals => http://www.hobbytronics.co.uk/arduino-float-vars
+ * Adafruit - Using a photocell => https://learn.adafruit.com/photocells/using-a-photocell
  */
