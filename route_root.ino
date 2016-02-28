@@ -7,6 +7,7 @@ void handleRoot() {
   int sec = millis() / 1000;
   int min = sec / 60;
   int hr = min / 60;
+  int ldrValue = analogRead(ldr);
 
   // Convert the floats to strings
   char tc[6];
@@ -32,10 +33,11 @@ void handleRoot() {
     <p><strong>Celsius</strong>: %s C</p>\
     <p><strong>Fahrenheit</strong>: %s F</p>\
     <p><strong>Humidity</strong>: %s RH</p>\
+    <p><strong>Ambient Light</strong>: %d</p>\
   </body>\
 </html>",
 
-    hr, min % 60, sec % 60, tc, tf, hm
+    hr, min % 60, sec % 60, tc, tf, hm, ldr
   );
   server.send ( 200, "text/html", temp );
   digitalWrite ( ledWiFi, 1 );

@@ -16,17 +16,18 @@ WiFiClient client; // Create an ESP8266 WiFiClient class.
 bool debug = 0; // Debug mode allows printing to the serial port.
 const int hdc_sda = 14; // SDA port for the HDC1000
 const int hdc_scl = 2; // SCL port for the HDC1000
-const int ldr = 9; // Set pin for the LDR
+const int ldr = A0; // Set pin for the LDR
 const int ledWiFi = 16; // LEDs are going to be used.
 const char *dnsName = "esp8266-lee"; // DNS Name
-float currentTemp = 0.000;
-float currentHumidity = 0.000;
+//float currentTemp = 0.000; // variable to store current temp
+//float currentHumidity = 0.000; // variable to store current humidity
+int ldrValue = 0; // variable to store current value from the LDR
 
 // Set WiFi constants
-const char *ssid = "@400SoAve#";
-const char *password = "589ShU!$305";
-//const char *ssid = "theNile";
-//const char *password = "stereo!3";
+//const char *ssid = "@400SoAve#";
+//const char *password = "589ShU!$305";
+const char *ssid = "theNile";
+const char *password = "stereo!3";
 
 // Functions
 void connectWiFi();
@@ -34,6 +35,9 @@ char getWiFiAddress(void);
 void handleRoot();
 void handleNotFound();
 void handleTemperature();
+void handleTemperatureC();
+void handleTemperatureF();
+void handleTemperatureK();
 void handleHumidity();
 float getTempCelsius(void);
 float getTempFahrenheit(void);
@@ -75,23 +79,23 @@ void setup ( void ) {
 void loop ( void ) {
 //  digitalWrite ( ledWiFi, 0 );
   server.handleClient();
-  
-  getWiFiAddress();
-  
-  float currentTemp = hdc.readTemperature();
-  float currentHumidity = hdc.readHumidity();
-  
-  Serial.print("Temp: "); 
-  Serial.print(currentTemp);
-  Serial.print("C / ");
-  Serial.print(currentTemp * 9/5 + 32);
-  Serial.print("F"); 
-  Serial.print("\tHum: "); 
-  Serial.println(currentHumidity);
 
-//  digitalWrite ( ledWiFi, 1 );
-//  delay(180000); // 3 minutes
-//  delay(30000); // 30 seconds
+  Serial.print("LDR Value = ");
+  Serial.println(analogRead(ldr));
+//  
+//  getWiFiAddress();
+//  
+//  Serial.print("Temp: "); 
+//  Serial.print(getTempCelsius());
+//  Serial.print("C / ");
+//  Serial.print(getTempFahrenheit());
+//  Serial.print("F"); 
+//  Serial.print("\tHum: "); 
+//  Serial.println(getHumidityRH());
+//
+////  digitalWrite ( ledWiFi, 1 );
+////  delay(180000); // 3 minutes
+////  delay(30000); // 30 seconds
   delay(500); // .5 seconds
 }
 
