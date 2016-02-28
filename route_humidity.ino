@@ -8,7 +8,7 @@ float getHumidityRH(void) {
 void handleHumidity() {
   String out = "";
   out += "{\"humidity\":{\"relative\":";
-  out += hdc.readHumidity();
+  out += getHumidityRH();
   out += "}}";
   server.send ( 200, "application/json", out );
 }
