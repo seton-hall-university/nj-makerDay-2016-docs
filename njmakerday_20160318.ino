@@ -31,6 +31,7 @@ const char *password = "stereo!3";
 void connectWiFi();
 char getWiFiAddress(void);
 void handleRoot();
+void handleSensors();
 void handleNotFound();
 void handleTemperature();
 void handleTemperatureC();
@@ -59,13 +60,14 @@ void setup ( void ) {
   }
   
 	server.on ( "/", handleRoot );
+  server.on ( "/sensors", handleSensors );
   server.on ( "/temperature", handleTemperature );
   server.on ( "/temperature/celsius", handleTemperatureC );
   server.on ( "/temperature/fahrenheit", handleTemperatureF );
   server.on ( "/temperature/kelvin", handleTemperatureK );
   server.on ( "/humidity", handleHumidity );
-	server.on ( "/inline", []() {
-		server.send ( 200, "text/plain", "this works as well" );
+	server.on ( "/test", []() {
+		server.send ( 200, "text/plain", "<p>this works as well</p>" );
 	} );
 	server.onNotFound ( handleNotFound );
 	server.begin();
