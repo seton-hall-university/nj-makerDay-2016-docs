@@ -3,7 +3,7 @@
 
 void handleRoot() {
  digitalWrite ( ledWiFi, 0 );
-  char temp[1024];
+  char temp[1536];
   int sec = millis() / 1000;
   int min = sec / 60;
   int hr = min / 60;
@@ -16,23 +16,33 @@ void handleRoot() {
   dtostrf(getTempFahrenheit(), 3, 2, tf);
   dtostrf(getHumidityRH(), 3, 2, hm);
 
-  snprintf ( temp, 1024,
+  snprintf ( temp, 1536,
 
-"<html>\
-  <head>\
-    <meta http-equiv='refresh' content='5'/>\
-    <title>ESP8266 Temp/Humidity Sensors</title>\
-    <style>\
-      body { background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }\
-    </style>\
-  </head>\
-  <body>\
-    <h1>Hello from ESP8266!</h1>\
-    <p><strong>Uptime</strong>: %02d:%02d:%02d</p>\
-    <p><strong>Celsius</strong>: %s C</p>\
-    <p><strong>Fahrenheit</strong>: %s F</p>\
-    <p><strong>Humidity</strong>: %s RH</p>\
-  </body>\
+"<html class=\"no-js\" lang=\"en\"><head><meta charset=\"utf-8\">\
+<meta http-equiv=\"refresh\" content=\"13\">\
+<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\
+<title>ESP8266 Temp/Humidity Sensors</title>\
+<script src=\"//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js\"></script>\
+<link rel=\"stylesheet\" href=\"//cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css\">\
+<style>\
+body{background-color: lightslategrey;}\
+.callout{color:dimgrey!important;text-align:center;margin:1rem;padding:.25rem}\
+.callout h2{font-weight:600;font-style:italic}\
+header{background-color:rgba(0,0,139,.25);text-align:center;color:oldlace;padding:13px;}\
+</style>\
+</head><body>\
+<header><h1>ESP8266 Temp/Humidity Sensors</h1><h3 class=\"subheader\">Uptime: %02d:%02d:%02d</h3></header>\
+<section class=\"row\">\
+<article class=\"medium-4 columns\"><div class=\"secondary large callout\"><h2>%s</h2><p><strong>Celsius</strong></p></div></article>\
+<article class=\"medium-4 columns\"><div class=\"secondary large callout\"><h2>%s</h2><p><strong>Fahrenheit</strong></p></div></article>\
+<article class=\"medium-4 columns\"><div class=\"secondary large callout\"><h2>%s</h2><p><strong>Relative Humidity</strong></p></div></article>\
+</section>\
+<script src=\"//code.jquery.com/jquery-1.9.1.min.js\"></script>\
+<script src=\"//cdn.jsdelivr.net/foundation/6.2.0/foundation.min.js\"></script>\
+<script>\
+$(document).foundation();\
+</script>\
+</body>\
 </html>",
 
     hr, min % 60, sec % 60, tc, tf, hm
