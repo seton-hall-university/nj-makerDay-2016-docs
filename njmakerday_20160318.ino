@@ -4,7 +4,7 @@
 #include <ESP8266WiFiMulti.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
-//#include <ESP8266mDNS.h>
+#include <ESP8266mDNS.h>
 #include "Adafruit_HDC1000.h"
 #include <Wire.h>
 
@@ -27,7 +27,8 @@ const char *dnsName = "esp8266-01"; // DNS Name
 //const char* password3 = "PASS_3";
 
 // Functions
-void connectWiFi();
+void setupDNS(void);
+void connectWiFi(void);
 char getWiFiAddress(void);
 void handleRoot();
 void handleSensors();
@@ -50,6 +51,9 @@ void setup ( void ) {
   
   // Connect to Wifi
   connectWiFi();
+
+  // Setup mDNS
+  setupDNS();
   
   Serial.println("Setting up HDC100x...");
   Wire.begin(hdc_sda, hdc_scl);

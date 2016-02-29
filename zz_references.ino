@@ -10,4 +10,5 @@
  * Converting floats to decimals => http://www.hobbytronics.co.uk/arduino-float-vars
  * Adafruit - Using a photocell => https://learn.adafruit.com/photocells/using-a-photocell
  * ESP8266 Multi-WiFi => https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266WiFi/examples/WiFiMulti/WiFiMulti.ino
+ * ESP8266 Multicast DNS => https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266mDNS
  */
