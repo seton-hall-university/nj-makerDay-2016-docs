@@ -10,6 +10,7 @@
 
 Adafruit_HDC1000 hdc = Adafruit_HDC1000(); // Create a class for the HDC Sensor
 ESP8266WebServer server ( 80 ); // Create an ESP8266 Server class
+ESP8266WiFiMulti wifiMulti; // Create an ESP8266 Multi WiFi class
 WiFiClient client; // Create an ESP8266 WiFiClient class.
 
 // Program Variables
@@ -17,15 +18,13 @@ bool debug = 0; // Debug mode allows printing to the serial port.
 const int hdc_sda = 14; // SDA port for the HDC1000
 const int hdc_scl = 2; // SCL port for the HDC1000
 const int ledWiFi = 16; // LEDs are going to be used.
-//const char *dnsName = "esp8266-lee"; // DNS Name
+const char *dnsName = "esp8266-01"; // DNS Name
 //float currentTemp = 0.000; // variable to store current temp
 //float currentHumidity = 0.000; // variable to store current humidity
 
 // Set WiFi constants
-//const char *ssid = "@400SoAve#";
-//const char *password = "589ShU!$305";
-const char *ssid = "theNile";
-const char *password = "stereo!3";
+//const char* ssid3     = "SSID_3";
+//const char* password3 = "PASS_3";
 
 // Functions
 void connectWiFi();

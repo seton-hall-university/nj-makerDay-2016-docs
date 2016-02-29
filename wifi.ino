@@ -2,31 +2,21 @@
 #include "Arduino.h"
 
 void connectWiFi() {
-  WiFi.begin ( ssid, password );
-  Serial.println ( "" );
+  wifiMulti.addAP(ssid1, password1);        //if you have less SSID, delete the others
+  wifiMulti.addAP(ssid2, password2);
+//  wifiMulti.addAP(ssid3, password3);
+
+  Serial.print("Connecting WiFi...");
   
-  // Wait for connection
-  while ( WiFi.status() != WL_CONNECTED ) {
-    digitalWrite ( ledWiFi, 0 );
-    delay ( 1000 );
-     Serial.print ( "Connecting...\n" );
-
-    Serial.print("Attempting to connect to SSID: ");
-    Serial.println ( ssid );
-
-    Serial.print("Current WiFi Status: ");
-    Serial.println ( WiFi.status() );
+  while (wifiMulti.run() != WL_CONNECTED) {
+    delay(1000);
+  Serial.print("Connecting...\n");
   }
 
   digitalWrite ( ledWiFi, 1 );
   Serial.println ( "" );
-  Serial.print ( "Connected to " );
-  Serial.println ( ssid );
+  Serial.print ( "WiFi Connected" );
   getWiFiAddress();
-  
-//  if ( MDNS.begin ( dnsName ) ) {
-//    Serial.println ( "MDNS responder started" );
-//  }
 }
 
 char getWiFiAddress(void) {
@@ -36,4 +26,3 @@ char getWiFiAddress(void) {
 
   return WiFi.localIP();
 }
-

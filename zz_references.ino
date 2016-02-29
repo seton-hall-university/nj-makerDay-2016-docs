@@ -9,4 +9,5 @@
  * Temperature Information => https://en.wikipedia.org/wiki/Category:Units_of_temperature
  * Converting floats to decimals => http://www.hobbytronics.co.uk/arduino-float-vars
  * Adafruit - Using a photocell => https://learn.adafruit.com/photocells/using-a-photocell
+ * ESP8266 Multi-WiFi => https://github.com/esp8266/Arduino/blob/master/libraries/ESP8266WiFi/examples/WiFiMulti/WiFiMulti.ino
  */
