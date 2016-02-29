@@ -24,9 +24,9 @@ void connectWiFi() {
   Serial.println ( ssid );
   getWiFiAddress();
   
-  if ( MDNS.begin ( dnsName ) ) {
-    Serial.println ( "MDNS responder started" );
-  }
+//  if ( MDNS.begin ( dnsName ) ) {
+//    Serial.println ( "MDNS responder started" );
+//  }
 }
 
 char getWiFiAddress(void) {

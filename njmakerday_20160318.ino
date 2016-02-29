@@ -4,7 +4,7 @@
 #include <ESP8266WiFiMulti.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
-#include <ESP8266mDNS.h>
+//#include <ESP8266mDNS.h>
 #include "Adafruit_HDC1000.h"
 #include <Wire.h>
 
@@ -17,7 +17,7 @@ bool debug = 0; // Debug mode allows printing to the serial port.
 const int hdc_sda = 14; // SDA port for the HDC1000
 const int hdc_scl = 2; // SCL port for the HDC1000
 const int ledWiFi = 16; // LEDs are going to be used.
-const char *dnsName = "esp8266-lee"; // DNS Name
+//const char *dnsName = "esp8266-lee"; // DNS Name
 //float currentTemp = 0.000; // variable to store current temp
 //float currentHumidity = 0.000; // variable to store current humidity
 
