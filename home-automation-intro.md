@@ -1,6 +1,6 @@
 <!--
 Title: Intro to Home Automation with the ESP8266 - NJ Makers Day 2016
-Summary: .
+Summary: This document was used to promote the event on the blog.
 Author: G. L. Clark, II
 Date: February 16, 11:15
 Filename: nj-maker-day-20160216.md
