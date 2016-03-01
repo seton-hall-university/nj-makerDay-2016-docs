@@ -15,7 +15,7 @@ Filename: README.md
 
 The run time for this activity should be around one(1) hour.
 
-#### _References:_
+### _References:_
 
  - [Report the temperature with ESP8266 to MQTT](https://home-assistant.io/blog/2015/10/11/measure-temperature-with-esp8266-and-report-to-mqtt/)
  - [Home Automation in the Cloud with the ESP8266 & Adafruit IO](https://learn.adafruit.com/home-automation-in-the-cloud-with-the-esp8266-and-adafruit-io)
