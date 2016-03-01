@@ -1,13 +1,13 @@
 <!--
-Title: Intro to Home Automation with the ESP8266 - NJ Makers Day 2016
+Title: Intro to Home Automation with the ESP8266
 Summary: This document was used to promote the event on the blog.
 Author: G. L. Clark, II
 Date Created: February 16, 11:15
 Date Modified:{{ file.mtime }}
-Filename: nj-maker-day-20160216.md
+Filename: README.md
 -->
 
-# Intro to Home Automation with the ESP8266 - NJ Makers Day 2016
+# Intro to Home Automation with the ESP8266
 
 #### Learn how to wire up a temperature and humidity sensor to to get accurate readings of your surroundings. Once everything is  up and running, send the data to a web server so you can monitor it anywhere.
 
