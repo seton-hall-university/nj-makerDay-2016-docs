@@ -1,1 +1,8 @@
-{}
+{
+    "title": "\"Hello Maker World\": An Intro to Web Development with Home Automation",
+    "description": "Ever wondered what makes web pages work? Thought about home automation and the Internet of Things?  This workshop will introduce you to the basics of HTML and CSS - the code required to create and style web pages",
+    "language": "en",
+    "structure": {
+        "readme": "INTRO.md"
+    }
+}
