@@ -37,4 +37,4 @@ There are also:
  | 3 | Arduino Starter Kits |
  | 2 | ChibiTronics Stater Kits |
 
-<p style="text-align: right; font-style: italic; color: rgba(105, 105, 105, .5);">Last Updated: {{ file.mtime }}</p>
+<p style="text-align: right; font-style: italic; color: rgba(105, 105, 105, .5);">Last Updated: 2106FEB29</p>
