@@ -23,6 +23,26 @@ Electricity is typically defined as having a voltage and a current rating. Volta
 
 To get a better understanding of these different measurements, check out this video on Ohm's Law. It will show you what the measurements mean and how they relate to each other.
 
+## Circuits
+
+A circuit is a complete and closed path through which electric current can flow. In other words, a closed circuit would allow the flow of electricity between power and ground. An open circuit would break the flow of electricity between power and ground.
+
+Anything that is part of a closed system and allows electricity to flow between power and ground is considered to be part of the circuit.
+
+## Resistance
+
+The next very important consideration to keep in mind is that electricity in a circuit must be used. There should be something wired between the positive and ground that adds resistance to the flow of electricity. If positive voltage is connected directly to ground and does not first pass through something that adds resistance, like a motor, then a short circuit will result. This means that the positive voltage is connected directly to ground.
+
+Likewise, if electricity passes through a component (or group of components) that does not add enough resistance to the circuit, a short will likewise occur ([see Ohm's Law video](http://www.youtube.com/watch?v=_-jX3dezzMg)).
+
+Shorts are bad because they will result in your battery and/or circuit overheating, breaking, catching on fire, and/or exploding.
+
+**_It is very important to prevent short circuits by making sure that the positive voltage is never wired directly to ground._**
+
+Always keep in mind that electricity always follows the path of least resistance to ground.This means is that if you give positive voltage the choice to pass through a motor or follow a wire straight to ground, it will follow the wire because the wire provides the least resistance. This also means that by using the wire to bypass the source of resistance straight to ground, you have created a short circuit. Always make sure that you never accidentally connect positive voltage to ground while wiring things in parallel.
+
+Also note that a switch does not add any resistance to a circuit and simply adding a switch between power and ground will create a short circuit.
+
 ---
 
 #### References
