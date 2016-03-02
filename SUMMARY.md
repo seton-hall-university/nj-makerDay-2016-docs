@@ -4,5 +4,6 @@
     * [Writing is nice](part1/writing.md)
     * [GitBook is nice](part1/gitbook.md)
 * [Part II](home-automation/README.md)
-    * [Components](home-automation/components.md)
     * [Circuitry](home-automation/circuitry.md)
+    * [Components](home-automation/components.md)
+    * 
