@@ -1,12 +1,11 @@
-<!--
-Title: Components
-Summary: This document describes basic components.
-Author: G. L. Clark, II
-Date Created: March 2, 2016
-Date Modified:{{ file.mtime }}
-Filename: circuitry-basics.md
--->
-
+---
+title: Components
+summary: This document describes basic components.
+author: G. L. Clark, II
+date Created: March 2, 2016
+date Modified:{{ file.mtime }}
+filename: circuitry-basics.md
+---
 # Components
 
 
