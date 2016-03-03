@@ -1,1 +1,13 @@
 /* CSS for website */
+figure {
+  margin: 15px 0;
+  width: 100%;
+  border:1px solid lightgray;
+  text-align:center;
+}
+
+figcaption {
+  background-color: aliceblue;
+  border-top: 1px solid lightgray;
+  font-style: italic;
+}
