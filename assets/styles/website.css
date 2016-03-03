@@ -3,6 +3,7 @@ figure {
   margin: 15px 0;
   width: 100%;
   border:1px solid lightgray;
+  padding-top: 10px;
   text-align:center;
 }
 
