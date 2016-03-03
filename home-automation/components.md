@@ -12,7 +12,7 @@ filename: circuitry-basics.md
 To build circuits, you will need to become familiar with a few basic components. These components may seem simple, but are the bread and butter of most electronics projects. Take a look at the following pages to learn about some of the basic components.
 
 <figure>
-<img src="../assets/images/components.svg" alt="Various Components" width="500px">
+<img src="../assets/images/components.svg" alt="Various Components">
 <figcaption>Various Components</figcaption>
 </figure>
 
