@@ -11,5 +11,8 @@ filename: circuitry-basics.md
 
 To build circuits, you will need to become familiar with a few basic components. These components may seem simple, but are the bread and butter of most electronics projects.
 
+---
+
+#### References
 
 [^1]: http://www.instructables.com/id/Basic-Electronics/step5/Basic-Components
