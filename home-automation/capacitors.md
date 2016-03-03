@@ -7,7 +7,7 @@ Capacitors are measured in [farads](https://en.wikipedia.org/wiki/Farad). The va
 The most commonly encountered types of capacitors are ceramic disc capacitors and electrolytic capacitors. Ceramic disc capacitors look like M&Ms with two wires sticking out of them. Electrolytic capacitors look like small cylindrical tubes with two wires coming out the bottom. Sometimes, these types of capacitors will have the wires on each end instead.
 
 <figure>
-<img src="../assets/images/capacitors.svg" alt="Various Capacitos" width="500px">
+<img src="../assets/images/capacitors.svg" alt="Various Capacitos">
 <figcaption>Various Capacitors</figcaption>
 </figure>
 
@@ -16,7 +16,7 @@ Ceramic disc capacitors are non-polarized. Meaning that electricity can pass thr
 Electrolytic capacitors are typically polarized. This means that one leg needs to be connected to the ground side of the circuit and the other leg must be connected to power. If it is connected backwards, it won't work. Electrolytic capacitors have the value written on them, typically represented in uF. They also mark the leg which connects to ground with a minus symbol (-). This capacitor is represented in a schematic as a side-by-side straight and curved line. The straight line represents the end which connects to power and the curve connected to ground.
 
 <figure>
-<img src="../assets/images/capacitors-schematic.svg" alt="Various capacitors schematic" width="500px">
+<img src="../assets/images/capacitors-schematic.svg" alt="Various capacitors schematic">
 <figcaption>Various capacitors as seen on a schematic</figcaption>
 </figure>
 
