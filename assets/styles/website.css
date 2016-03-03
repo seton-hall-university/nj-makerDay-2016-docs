@@ -13,6 +13,7 @@ figcaption {
   font-style: italic;
 }
 
+.book .book-body .page-wrapper .page-inner section.normal img,
 figure img {
   max-width: 95%;
   min-height: 150px;
