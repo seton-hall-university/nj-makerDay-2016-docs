@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='0.447861in' height='0.409722in' viewBox='0 0 32.246 29.5' >
+<g partID='57400'><g transform='translate(6.192,0)' ><g transform='matrix(0,1,-1,0,0,0)'  ><g xmlns="http://www.w3.org/2000/svg" id="schematic">
+<line stroke-linecap="round" y1="3.096" stroke="#000000" y2="0.216" x1="7.55002" x2="8.63003" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="0.216" stroke="#000000" y2="5.976" x1="8.63003" x2="10.43" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="5.976" stroke="#000000" y2="0.216" x1="10.43" x2="12.23" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="0.216" stroke="#000000" y2="5.976" x1="12.23" x2="14.03" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="5.976" stroke="#000000" y2="0.216" x1="14.03" x2="15.8301" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="0.216" stroke="#000000" y2="5.976" x1="15.8301" x2="17.6301" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="5.976" stroke="#000000" y2="0.216" x1="17.6301" x2="19.4301" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="0.216" stroke="#000000" y2="5.976" x1="19.4301" x2="21.2301" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="5.976" stroke="#000000" y2="3.096" x1="21.2301" x2="21.9501" class="other" stroke-width="0.432002" xmlns="http://www.w3.org/2000/svg"/>
+<line stroke-linecap="round" y1="3.096" stroke="#787878" y2="3.096" x1="29.1502" x2="21.9501" class="pin" connectorname="2" stroke-width="0.700001" xmlns="http://www.w3.org/2000/svg" id="connector1pin"/>
+<g x="29.1502" stroke="none" y="3.096" fill="none" width="0.000283466" height="0.000283465" class="terminal" stroke-width="0" xmlns="http://www.w3.org/2000/svg" id="connector1terminal"/>
+<text stroke="none" x="25.5501" fill="#8c8c8c" y="2.046" font-family="'Droid Sans'" class="text" stroke-width="0" xmlns="http://www.w3.org/2000/svg" font-size="2.50001" text-anchor="middle">2</text>
+<line stroke-linecap="round" y1="3.096" stroke="#787878" y2="3.096" x1="0.350001" x2="7.55002" class="pin" connectorname="1" stroke-width="0.700001" xmlns="http://www.w3.org/2000/svg" id="connector0pin"/>
+<g x="0.350001" stroke="none" y="3.096" fill="none" width="0.000283466" height="0.000283465" class="terminal" stroke-width="0" xmlns="http://www.w3.org/2000/svg" id="connector0terminal"/>
+<text stroke="none" x="3.95001" fill="#8c8c8c" y="2.046" font-family="'Droid Sans'" class="text" stroke-width="0" xmlns="http://www.w3.org/2000/svg" font-size="2.50001" text-anchor="middle">1</text>
+</g>
+</g></g></g><g partID='57400' id='partLabel'><g transform='translate(17.846,0.453992)' ><g font-size='5' font-style='normal' font-weight='normal' fill='#000000' font-family="'DroidSans'" id='schematicLabel' fill-opacity='1' stroke='none' ><text x='0' y='3.75'>R1</text><text x='0' y='8.75'>220&#x3a9;</text></g></g></g></svg>
