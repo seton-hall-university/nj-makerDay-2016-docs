@@ -3,7 +3,7 @@
 As the name implies, resistors add resistance to the circuit and reduces the flow of electrical current. In a circuit diagram they are represented as a pointy squiggle with a value next to it.
 
 <figure>
-<img src="../assets/images/resistors-schematic.svg" alt="Resistor Schematic Display" width="250px">
+<img src="../assets/images/resistors-schematic.svg" alt="Resistor Schematic Display">
 <figcaption>Resistor Schematic Display</figcaption>
 </figure>
 
@@ -14,7 +14,7 @@ Resistors also come with different wattage ratings. For most low-voltage DC circ
 You read the values from left to right towards the (typically) gold band. The first two colors represent the resistor value. The third represents the multiplier. And the fourth (the gold band) represents the tolerance or precision of the component. You can tell the value of each color by looking at a resistor color value chart.
 
 <figure>
-<img src="../assets/images/resistors.svg" alt="Various Resistors" width="500px">
+<img src="../assets/images/resistors.svg" alt="Various Resistors">
 <figcaption>Various Resistors</figcaption>
 </figure>
 
