@@ -9,7 +9,7 @@ filename: circuitry-basics.md
 
 # Components[^1]
 
-To build circuits, you will need to become familiar with a few basic components. These components may seem simple, but are the bread and butter of most electronics projects.
+To build circuits, you will need to become familiar with a few basic components. These components may seem simple, but are the bread and butter of most electronics projects. Take a look at the following pages to learn about some of the basic components.
 
 ---
 
