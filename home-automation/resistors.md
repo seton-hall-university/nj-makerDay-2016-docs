@@ -1,4 +1,4 @@
-# Resistors
+# Resistors[^1]
 
 As the name implies, resistors add resistance to the circuit and reduces the flow of electrical current. In a circuit diagram they are represented as a pointy squiggle with a value next to it.
 
@@ -30,3 +30,8 @@ Any resistor of over 1000 ohms is typically shorted using the letter K; e.g.:
  - 470,000 ohms = 470K.
 
 Values of ohms over a million are represented using the letter M. In this case, 1,000,000 ohms would become 1M.
+
+---
+#### References
+
+[^1]: http://www.instructables.com/id/Basic-Electronics/step6/Resistors
