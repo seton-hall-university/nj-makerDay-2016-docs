@@ -6,4 +6,5 @@
 * [Part II](home-automation/README.md)
     * [Circuitry](home-automation/circuitry.md)
     * [Components](home-automation/components.md)
-    * 
+      * Resistors
+      * Capacitors
