@@ -7,10 +7,9 @@ date Modified:{{ file.mtime }}
 filename: circuitry-basics.md
 --->
 
-# Components
+# Components[^1]
 
 To build circuits, you will need to become familiar with a few basic components. These components may seem simple, but are the bread and butter of most electronics projects.
 
 
 [^1]: http://www.instructables.com/id/Basic-Electronics/step5/Basic-Components
-[^2]: http://www.instructables.com/id/Basic-Electronics/step6/Resistors
