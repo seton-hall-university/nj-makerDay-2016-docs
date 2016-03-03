@@ -12,3 +12,7 @@ figcaption {
   border-top: 1px solid lightgray;
   font-style: italic;
 }
+
+figure img {
+  max-width: 95%;
+}
