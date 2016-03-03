@@ -8,5 +8,5 @@
    * [Circuitry](home-automation/circuitry.md)
    * [Components](home-automation/components.md)
        * [Resistors](home-automation/resistors.md)
-       * Capacitors
+       * [Capacitors](home-automation/capacitors.md)
 
