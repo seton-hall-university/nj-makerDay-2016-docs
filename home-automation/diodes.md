@@ -25,7 +25,7 @@ The part number of the diode is typically written on it, and you can find out it
 They are represented in schematic as a line with a triangle pointing at it. The line is that side which connected to ground and the bottom of the triangle connects to power.
 
 <figure>
-<img src="../assets/images/diodes-schematic.svg" alt="Diodes">
+<img src="../assets/images/diodes-schematic.svg" alt="Diodes - Schematic View">
 <figcaption>Various Components</figcaption>
 </figure>
 
