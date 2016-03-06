@@ -7,7 +7,7 @@ Date Modified:{{ file.mtime }}
 Filename: README.md
 -->
 
-# Intro to Home Automation with the ESP8266
+# Home Automation with the ESP8266
 
 #### Learn how to wire up a temperature and humidity sensor to to get accurate readings of your surroundings. Once everything is  up and running, send the data to a web server so you can monitor it anywhere.
 
