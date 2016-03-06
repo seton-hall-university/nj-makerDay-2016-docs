@@ -9,7 +9,7 @@ filename: diodes.md
 
 # Diodes[^1]
 
-Diodes are components that allow electrical current to pass through them in one direction. They are useful because they can be placed in a circuit to prevent electricity from flowing in the wrong direction.
+The most common function of a diode is to allow an electric current to pass in one direction (called the diode's forward direction), while blocking current in the opposite direction (the reverse direction)[^2]. They are useful because they can be placed in a circuit to prevent electricity from flowing in the wrong direction.
 
 <figure>
 <img src="../assets/images/diodes.svg" alt="Diodes">
@@ -30,3 +30,4 @@ The ring found on one end of the diode indicates the side of the diode which con
 #### References
 
 [^1]: http://www.instructables.com/id/Basic-Electronics/step8/Diodes/
+[^2]: https://en.wikipedia.org/wiki/Diode
