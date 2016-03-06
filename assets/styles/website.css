@@ -17,3 +17,7 @@ figure img {
   max-width: 95% !important;
   min-height: 150px;
 }
+
+hr {
+  height: 2px;
+}
