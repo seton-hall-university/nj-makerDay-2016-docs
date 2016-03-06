@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='0.809259in' height='0.417764in' viewBox='0 0 58.2667 30.079' >
+<g partID='61700'><g transform='translate(51.0667,30.079)' ><g transform='matrix(0,-1,1,0,0,0)'  ><g xmlns="http://www.w3.org/2000/svg" id="breadboard">
+ <rect xmlns="http://www.w3.org/2000/svg" x="0.011" y="2.583" fill="none" width="1" height="1" id="connector0pin"/>
+ <rect xmlns="http://www.w3.org/2000/svg" x="25.576" y="2.583" fill="none" width="1" height="1" id="connector1pin"/>
+ <line xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" y1="3.63" stroke="#8C8C8C" y2="3.63" fill="none" x1="1.047" x2="2.094" stroke-width="2.094" id="connector0leg"/>
+ <line xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" y1="3.63" stroke="#8C8C8C" y2="3.63" fill="none" x1="27.785" x2="28.832" stroke-width="2.094" id="connector1leg"/>
+ <rect xmlns="http://www.w3.org/2000/svg" x="2.094" y="2.583" fill="#8C8C8C" width="25.691" height="2.094" id="rect7"/>
+ <g xmlns="http://www.w3.org/2000/svg">
+  <path xmlns="http://www.w3.org/2000/svg" fill="#1A1A1A" id="Body_1_" d="M9.159,0L7.002,0c-0.475,0,-0.393,7.193,0,7.193l2.157,0c0.396,0,11.114,0,11.508,0l2.158,0c0.515,0,0.558,-7.193,0,-7.193l-2.158,0C20.27,0,9.553,0,9.159,0z"/>
+  <rect xmlns="http://www.w3.org/2000/svg" x="9.783" y="0" fill="#FFFFFF" enable-background="new    " width="1.992" height="7.193" opacity="0.74" id="rect16"/>
+  <path xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" enable-background="new    " opacity="0.4" id="Reflex_1_" d="M7.289,0.358c0.726,0,1.145,0,1.866,0c0.719,0,10.786,0,11.508,0c0.021,0,0.229,0,0.479,0c0.563,0,1.066,0,1.311,0c0.354,0,1.146,0.36,-0.354,0.36c-1.08,0,-0.726,0,-1.438,0c-0.717,0,-10.791,0,-11.508,0c-0.723,0,-1.145,0,-1.866,0C6.931,0.719,6.573,0.358,7.289,0.358z"/>
+  <path xmlns="http://www.w3.org/2000/svg" enable-background="new    " opacity="0.4" id="Shaddow_1_" d="M22.822,7.194c-0.727,0.014,-1.438,0,-2.156,0c-0.902,0,-12.942,0,-13.667,0c-0.091,0,-0.202,-0.723,-0.182,-0.723c1.293,0,1.613,0,2.336,0c0.723,0,10.789,0,11.509,0c0.721,0,1.67,0,2.393,0C23.076,6.471,22.969,7.192,22.822,7.194z"/>
+ </g>
+</g>
+</g></g></g><g partID='61680'><g transform='translate(44.8062,18.5395)' ><g transform='matrix(-1,0,0,-1,0,0)'  ><g xmlns="http://www.w3.org/2000/svg" id="breadboard">
+ <rect xmlns="http://www.w3.org/2000/svg" x="0.011" y="2.583" fill="none" width="1" height="1" id="connector0pin"/>
+ <rect xmlns="http://www.w3.org/2000/svg" x="25.576" y="2.583" fill="none" width="1" height="1" id="connector1pin"/>
+ <line xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" y1="3.63" stroke="#8C8C8C" y2="3.63" fill="none" x1="1.047" x2="2.094" stroke-width="2.094" id="connector0leg"/>
+ <line xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" y1="3.63" stroke="#8C8C8C" y2="3.63" fill="none" x1="27.785" x2="28.832" stroke-width="2.094" id="connector1leg"/>
+ <rect xmlns="http://www.w3.org/2000/svg" x="2.094" y="2.583" fill="#8C8C8C" width="25.691" height="2.094" id="rect7"/>
+ <g xmlns="http://www.w3.org/2000/svg">
+  <path xmlns="http://www.w3.org/2000/svg" fill="#1A1A1A" id="Body_1_" d="M9.159,0L7.002,0c-0.475,0,-0.393,7.193,0,7.193l2.157,0c0.396,0,11.114,0,11.508,0l2.158,0c0.515,0,0.558,-7.193,0,-7.193l-2.158,0C20.27,0,9.553,0,9.159,0z"/>
+  <rect xmlns="http://www.w3.org/2000/svg" x="9.783" y="0" fill="#FFFFFF" enable-background="new    " width="1.992" height="7.193" opacity="0.74" id="rect16"/>
+  <path xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" enable-background="new    " opacity="0.4" id="Reflex_1_" d="M7.289,0.358c0.726,0,1.145,0,1.866,0c0.719,0,10.786,0,11.508,0c0.021,0,0.229,0,0.479,0c0.563,0,1.066,0,1.311,0c0.354,0,1.146,0.36,-0.354,0.36c-1.08,0,-0.726,0,-1.438,0c-0.717,0,-10.791,0,-11.508,0c-0.723,0,-1.145,0,-1.866,0C6.931,0.719,6.573,0.358,7.289,0.358z"/>
+  <path xmlns="http://www.w3.org/2000/svg" enable-background="new    " opacity="0.4" id="Shaddow_1_" d="M22.822,7.194c-0.727,0.014,-1.438,0,-2.156,0c-0.902,0,-12.942,0,-13.667,0c-0.091,0,-0.202,-0.723,-0.182,-0.723c1.293,0,1.613,0,2.336,0c0.723,0,10.789,0,11.509,0c0.721,0,1.67,0,2.393,0C23.076,6.471,22.969,7.192,22.822,7.194z"/>
+ </g>
+</g>
+</g></g></g><g partID='61660'><g transform='translate(0,29.879)' ><g transform='matrix(0,-1,1,0,0,0)'  ><g xmlns="http://www.w3.org/2000/svg" id="breadboard">
+ <rect xmlns="http://www.w3.org/2000/svg" x="0.011" y="2.583" fill="none" width="1" height="1" id="connector0pin"/>
+ <rect xmlns="http://www.w3.org/2000/svg" x="25.576" y="2.583" fill="none" width="1" height="1" id="connector1pin"/>
+ <line xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" y1="3.63" stroke="#8C8C8C" y2="3.63" fill="none" x1="1.047" x2="2.094" stroke-width="2.094" id="connector0leg"/>
+ <line xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" y1="3.63" stroke="#8C8C8C" y2="3.63" fill="none" x1="27.785" x2="28.832" stroke-width="2.094" id="connector1leg"/>
+ <rect xmlns="http://www.w3.org/2000/svg" x="2.094" y="2.583" fill="#8C8C8C" width="25.691" height="2.094" id="rect7"/>
+ <g xmlns="http://www.w3.org/2000/svg">
+  <path xmlns="http://www.w3.org/2000/svg" fill="#1A1A1A" id="Body_1_" d="M9.159,0L7.002,0c-0.475,0,-0.393,7.193,0,7.193l2.157,0c0.396,0,11.114,0,11.508,0l2.158,0c0.515,0,0.558,-7.193,0,-7.193l-2.158,0C20.27,0,9.553,0,9.159,0z"/>
+  <rect xmlns="http://www.w3.org/2000/svg" x="9.783" y="0" fill="#FFFFFF" enable-background="new    " width="1.992" height="7.193" opacity="0.74" id="rect16"/>
+  <path xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" enable-background="new    " opacity="0.4" id="Reflex_1_" d="M7.289,0.358c0.726,0,1.145,0,1.866,0c0.719,0,10.786,0,11.508,0c0.021,0,0.229,0,0.479,0c0.563,0,1.066,0,1.311,0c0.354,0,1.146,0.36,-0.354,0.36c-1.08,0,-0.726,0,-1.438,0c-0.717,0,-10.791,0,-11.508,0c-0.723,0,-1.145,0,-1.866,0C6.931,0.719,6.573,0.358,7.289,0.358z"/>
+  <path xmlns="http://www.w3.org/2000/svg" enable-background="new    " opacity="0.4" id="Shaddow_1_" d="M22.822,7.194c-0.727,0.014,-1.438,0,-2.156,0c-0.902,0,-12.942,0,-13.667,0c-0.091,0,-0.202,-0.723,-0.182,-0.723c1.293,0,1.613,0,2.336,0c0.723,0,10.789,0,11.509,0c0.721,0,1.67,0,2.393,0C23.076,6.471,22.969,7.192,22.822,7.194z"/>
+ </g>
+</g>
+</g></g></g></svg>

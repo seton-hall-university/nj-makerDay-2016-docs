@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' version='1.2' baseProfile='tiny' x='0in' y='0in' width='0.81in' height='0.3in' viewBox='0 0 58.32 21.6' >
+<g partID='61700'><g transform='translate(7.92,2.27374e-14)' ><g transform='matrix(0,1,-1,0,0,0)'  ><g id="schematic">
+<g>
+<line stroke-linecap="round" stroke="#000000" y1="0.36" fill="none" y2="3.96" x1="14.4" x2="14.4" stroke-width="0.5"/>
+<polygon stroke-linecap="round" stroke="#000000" fill="#FFFFFF" points="14.4,3.96,7.2,7.56,7.2,0.36" stroke-width="0.75" stroke-linejoin="round"/>
+<line stroke-linecap="round" stroke="#000000" y1="3.96" fill="none" y2="7.56" x1="14.4" x2="14.4" stroke-width="0.5"/>
+</g>
+<line stroke-linecap="round" stroke="#000000" y1="3.96" fill="none" y2="3.96" x1="7.133" x2="14.467" stroke-width="0.5"/>
+<line stroke-linecap="round" stroke="#787878" y1="3.96" fill="none" y2="3.96" x1="0.35" x2="7.55" stroke-width="0.75" id="connector0pin"/>
+<g fill="none" points="1.019,4.319,0,4.304,0,3.632,1.019,3.616" id="connector0terminal"/>
+<g transform="matrix(1, 0, 0, 1, 1.1047, 2.9092)">
+<text fill="#8C8C8C" font-family="'DroidSans'" font-size="2.5">1</text>
+</g>
+<line stroke-linecap="round" stroke="#787878" y1="3.96" fill="none" y2="3.96" x1="21.25" x2="14.05" stroke-width="0.75" id="connector1pin"/>
+<g fill="none" points="20.534,3.632,20.534,4.288,21.6,4.272,21.6,3.632" id="connector1terminal"/>
+<g transform="matrix(1, 0, 0, 1, 19.4973, 2.9092)">
+<text fill="#8C8C8C" font-family="'DroidSans'" font-size="2.5">2</text>
+</g>
+</g>
+</g></g></g><g partID='61680'><g transform='translate(15.6695,8.4475)' ><g id="schematic">
+<g>
+<line stroke-linecap="round" stroke="#000000" y1="0.36" fill="none" y2="3.96" x1="14.4" x2="14.4" stroke-width="0.5"/>
+<polygon stroke-linecap="round" stroke="#000000" fill="#FFFFFF" points="14.4,3.96,7.2,7.56,7.2,0.36" stroke-width="0.75" stroke-linejoin="round"/>
+<line stroke-linecap="round" stroke="#000000" y1="3.96" fill="none" y2="7.56" x1="14.4" x2="14.4" stroke-width="0.5"/>
+</g>
+<line stroke-linecap="round" stroke="#000000" y1="3.96" fill="none" y2="3.96" x1="7.133" x2="14.467" stroke-width="0.5"/>
+<line stroke-linecap="round" stroke="#787878" y1="3.96" fill="none" y2="3.96" x1="0.35" x2="7.55" stroke-width="0.75" id="connector0pin"/>
+<g fill="none" points="1.019,4.319,0,4.304,0,3.632,1.019,3.616" id="connector0terminal"/>
+<g transform="matrix(1, 0, 0, 1, 1.1047, 2.9092)">
+<text fill="#8C8C8C" font-family="'DroidSans'" font-size="2.5">1</text>
+</g>
+<line stroke-linecap="round" stroke="#787878" y1="3.96" fill="none" y2="3.96" x1="21.25" x2="14.05" stroke-width="0.75" id="connector1pin"/>
+<g fill="none" points="20.534,3.632,20.534,4.288,21.6,4.272,21.6,3.632" id="connector1terminal"/>
+<g transform="matrix(1, 0, 0, 1, 19.4973, 2.9092)">
+<text fill="#8C8C8C" font-family="'DroidSans'" font-size="2.5">2</text>
+</g>
+</g>
+</g></g><g partID='61660'><g transform='translate(58.32,0)' ><g transform='matrix(0,1,-1,0,0,0)'  ><g id="schematic">
+<g>
+<line stroke-linecap="round" stroke="#000000" y1="0.36" fill="none" y2="3.96" x1="14.4" x2="14.4" stroke-width="0.5"/>
+<polygon stroke-linecap="round" stroke="#000000" fill="#FFFFFF" points="14.4,3.96,7.2,7.56,7.2,0.36" stroke-width="0.75" stroke-linejoin="round"/>
+<line stroke-linecap="round" stroke="#000000" y1="3.96" fill="none" y2="7.56" x1="14.4" x2="14.4" stroke-width="0.5"/>
+</g>
+<line stroke-linecap="round" stroke="#000000" y1="3.96" fill="none" y2="3.96" x1="7.133" x2="14.467" stroke-width="0.5"/>
+<line stroke-linecap="round" stroke="#787878" y1="3.96" fill="none" y2="3.96" x1="0.35" x2="7.55" stroke-width="0.75" id="connector0pin"/>
+<g fill="none" points="1.019,4.319,0,4.304,0,3.632,1.019,3.616" id="connector0terminal"/>
+<g transform="matrix(1, 0, 0, 1, 1.1047, 2.9092)">
+<text fill="#8C8C8C" font-family="'DroidSans'" font-size="2.5">1</text>
+</g>
+<line stroke-linecap="round" stroke="#787878" y1="3.96" fill="none" y2="3.96" x1="21.25" x2="14.05" stroke-width="0.75" id="connector1pin"/>
+<g fill="none" points="20.534,3.632,20.534,4.288,21.6,4.272,21.6,3.632" id="connector1terminal"/>
+<g transform="matrix(1, 0, 0, 1, 19.4973, 2.9092)">
+<text fill="#8C8C8C" font-family="'DroidSans'" font-size="2.5">2</text>
+</g>
+</g>
+</g></g></g></svg>
