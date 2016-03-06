@@ -10,3 +10,4 @@
        * [Resistors](home-automation/resistors.md)
        * [Capacitors](home-automation/capacitors.md)
        * [Diodes](home-automation/diodes.md)
+       * [Integrated Circuits and Microcontrollers](home-automation/integrated-circuits.md)
