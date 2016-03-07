@@ -11,3 +11,4 @@
        * [Capacitors](home-automation/capacitors.md)
        * [Diodes](home-automation/diodes.md)
        * [Integrated Circuits and Microcontrollers](home-automation/integrated-circuits.md)
+       * [LEDs](home-automation/led.md)
