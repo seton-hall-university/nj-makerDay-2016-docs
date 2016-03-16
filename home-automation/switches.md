@@ -18,3 +18,7 @@ Normally closed (N.C.) switches open the circuit when activated.
 As switches get more complex they can both open one connection and close another when activated. This type of switch is a single-pole double-throw switch (SPDT).
 
 If you were to combine two SPDT switches into one single switch, it would be called a double-pole double-throw switch (DPDT). This would break two separate circuits and open two other circuits, every time the switch was activated.
+
+#### References
+
+[^1]: http://www.instructables.com/id/Basic-Electronics/step13/Switches/
