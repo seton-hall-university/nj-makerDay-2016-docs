@@ -27,3 +27,7 @@ I2C is a multi-master bus, which means that multiple chips can be connected to t
 ## IDE
 
 An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have an intelligent code completion. ( https://en.wikipedia.org/wiki/Integrated_development_environment )
+
+## ADC
+
+An analog-to-digital converter (ADC, A/D, or A to D) is a device that converts a continuous physical quantity (usually voltage) to a digital number that represents the quantity's amplitude. ( https://en.wikipedia.org/wiki/Analog-to-digital_converter )
