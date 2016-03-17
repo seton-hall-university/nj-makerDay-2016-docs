@@ -15,3 +15,4 @@
      * [Switches](home-automation/switches.md)
      * [Breadboards](home-automation/breadboards.md)
    * [NodeMCU DevKit](home-automation/nodemcu-devkit.md)
+   * Adafruit HDC1008 Temperature & Humidity Sensor
