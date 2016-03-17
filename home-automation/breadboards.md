@@ -9,26 +9,17 @@ filename: breadboards.md
 
 # Breadboards[^1]
 
-A switch is basically a mechanical device that creates a break in a circuit. When you activate the switch it opens or closes the circuit depending on the type of switch being used.
+Breadboards are special boards used to prototyping electronics. They are covered with a grid of holes, which are split into electrically continuous rows. By using a breadboard, you can build a circuit without soldering or twisting wires together. Connect the parts that should be wired together into one of the electrically continuous rows.
 
 <figure>
-<img src="../assets/images/switches.svg" alt="Various Switches">
-<figcaption>Various Switches</figcaption>
+<img src="../assets/images/breadboards.svg" alt="Various Switches">
+<figcaption>Various Breadboards</figcaption>
 </figure>
 
-_Normally Open (N.O.)_ switches close the circuit when activated.
+In the central part there are two columns of rows that are side-by-side. This allows you to be able to insert an integrated circuit into the center. Once inserted, each pin of the integrated circuit will have a row of holes connected to it.
 
-_Normally Closed (N.C.)_ switches open the circuit when activated.
-
-As switches get more complex they can both open one connection and close another when activated. This type of switch is a single-pole double-throw switch (SPDT).
-
-If you were to combine two _"SPDT"_ switches into one single switch, it would be called a double-pole double-throw switch (DPDT). This would break two separate circuits and open two other circuits, every time the switch is activated.
-
-<figure>
-<img src="../assets/images/switches-schematic.svg" alt="Schematic of Various Switches">
-<figcaption>Various Switches Schematic</figcaption>
-</figure>
+Typically on each edge of the breadboard are two continuous bus lines. One is intended to be used for power and the other as a ground. By plugging power and ground respectively into each of these, you can access them from anywhere on the breadboard.
 
 #### References
 
-[^1]: http://www.instructables.com/id/Basic-Electronics/step13/Switches/
+[^1]: http://www.instructables.com/id/Basic-Electronics/step15/Breadboards/
