@@ -14,4 +14,4 @@
      * [LEDs](home-automation/led.md)
      * [Switches](home-automation/switches.md)
      * [Breadboards](home-automation/breadboards.md)
-   * [NodeMCU DevKit](home-automation/nodemcu-devkit)
+   * [NodeMCU DevKit](home-automation/nodemcu-devkit.md)
