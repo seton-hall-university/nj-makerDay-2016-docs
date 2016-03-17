@@ -17,3 +17,5 @@
    * [NodeMCU DevKit](home-automation/nodemcu-devkit.md)
    * [Adafruit HDC1008 Temperature & Humidity Sensor](https://www.adafruit.com/products/2635)
    * [FTDI Serial TTL-232 USB Cable](https://www.adafruit.com/products/70)
+   * Wire the Circuit
+   * The "Sketch"
