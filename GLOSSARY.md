@@ -19,3 +19,7 @@ Pulse-width modulation (PWM) is a modulation process or technique used in most c
 ## I2C
 
 I2C is a multi-master bus, which means that multiple chips can be connected to the same bus and each one can act as a master by initiating a data transfer. I2C is used in many devices, especially video devices such as computer monitors, televisions and VCRs. ( https://www.google.com/search?q=i2c+definition&newwindow=1&espv=2&biw=1920&bih=1105&source=lnms&sa=X&ved=0ahUKEwj6zP2YxcbLAhUBQBoKHT3zAF8Q_AUIBSgA&dpr=1 )
+
+## 1-Wire
+
+1-Wire is a device communications bus system designed by Dallas Semiconductor Corp. that provides low-speed data, signaling, and power over a single signal. 1-Wire is similar in concept to I²C, but with lower data rates and longer range.
