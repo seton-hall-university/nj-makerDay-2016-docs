@@ -31,9 +31,9 @@ Anything that is part of a closed system and allows electricity to flow between 
 
 ## Resistance
 
-The next very important consideration to keep in mind is that electricity in a circuit must be used. There should be something wired between the positive and ground that adds resistance to the flow of electricity. If positive voltage is connected directly to ground and does not first pass through something that adds resistance, like a motor, then a short circuit will result. This means that the positive voltage is connected directly to ground.
+The next very important consideration to keep in mind is that electricity in a circuit must be used. There should be something wired between the positive and ground that adds resistance to the flow of electricity. If positive voltage is connected directly to ground and does not first pass through something that adds resistance, like a motor, then a short circuit will result. A short occurs when the positive voltage is connected directly to ground.
 
-Likewise, if electricity passes through a component (or group of components) that does not add enough resistance to the circuit, a short will likewise occur ([see Ohm's Law video](http://www.youtube.com/watch?v=_-jX3dezzMg)).
+If electricity passes through a component (or group of components) that does not add enough resistance to the circuit, a short will occur ([see Ohm's Law video](http://www.youtube.com/watch?v=_-jX3dezzMg)).
 
 Shorts are bad because they will result in your battery and/or circuit overheating, breaking, catching on fire, and/or exploding.
 
@@ -47,5 +47,4 @@ Also note that a switch does not add any resistance to a circuit and simply addi
 
 #### References
 
-- [Basic Electronics](http://www.instructables.com/id/Basic-Electronics/?ALLSTEPS) by 
-Randy Sarafan
+- [Basic Electronics](http://www.instructables.com/id/Basic-Electronics/?ALLSTEPS) by Randy Sarafan
