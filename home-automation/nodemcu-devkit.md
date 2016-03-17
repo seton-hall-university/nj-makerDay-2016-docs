@@ -16,7 +16,7 @@ The Development Kit is an open-source firmware and development platform that hel
 <figcaption>ESP8266 ESP-12, the heart of the NodeMCU DevKit</figcaption>
 </figure>
 
-Even though there are a few different ways to program the NodeMCU, we will be using the Arduino Software[^2]. This IDE is simple to use and makes "flashing" the DevKit easy.
+Even though there are many ways to program the NodeMCU, we will be using the Arduino Software[^2]. This IDE is simple to use and makes "flashing" the DevKit easy.
 
 
 #### References
