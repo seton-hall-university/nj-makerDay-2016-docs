@@ -12,11 +12,11 @@ filename: nodemcu-devkit.md
 The Development Kit is an open-source firmware and development platform that helps prototype your IOT product within a few lines of Lua script[^1]. Based on the ESP8266, it integrates GPIO, PWM, IIC, 1-Wire and ADC all in one board.
 
 <figure>
-<img src="http://nodemcu.com/images/thumbnail/zms.jpg_1200x1200.jpg" alt="NodeMCU DevKit">
+<img src="http://nodemcu.com/images/thumbnail/zms.jpg_1200x1200.jpg" alt="NodeMCU DevKit" width="550">
 <figcaption>NodeMCU Development Kit v1</figcaption>
 </figure>
 
-Even though there are a few different ways to program the NodeMCU, we will be using the Arduino Software[^2]. This IDE is very easy to use and makes "flashing"
+Even though there are a few different ways to program the NodeMCU, we will be using the Arduino Software[^2]. This IDE is simple to use and makes "flashing" the DevKit easy.
 
 
 #### References
