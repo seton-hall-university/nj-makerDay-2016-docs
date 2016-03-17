@@ -16,3 +16,4 @@
      * [Breadboards](home-automation/breadboards.md)
    * [NodeMCU DevKit](home-automation/nodemcu-devkit.md)
    * Adafruit HDC1008 Temperature & Humidity Sensor
+   * FTDI Serial TTL-232 USB Cable
