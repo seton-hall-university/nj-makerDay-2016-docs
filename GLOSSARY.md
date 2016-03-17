@@ -1,12 +1,12 @@
 # Glossary
 
-## flashing
+## Flashing
 
-Flashing involves the overwriting of existing firmware or data, contained in EEPROM or flash memory modules present in an electronic device, with new data. - https://en.wikipedia.org/wiki/Firmware#Flashing
+Flashing involves the overwriting of existing firmware or data, contained in EEPROM or flash memory modules present in an electronic device, with new data. ( https://en.wikipedia.org/wiki/Firmware#Flashing )
 
-## open-source
+## Open-Source
 
-Denoting software for which the original source code is made freely available and may be redistributed and modified.
+Denoting software for which the original source code is made freely available and may be redistributed and modified.  ( https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=Open-Source+definition )
 
 ## GPIO
 
