@@ -1,12 +1,12 @@
 # Glossary
 
-## Flashing
+## flashing
 
-Flashing involves the overwriting of existing firmware or data, contained in EEPROM or flash memory modules present in an electronic device, with new data. ( https://en.wikipedia.org/wiki/Firmware#Flashing )
+Flashing involves the overwriting of existing firmware or data, contained in EEPROM or flash memory modules present in an electronic device, with new data. - https://en.wikipedia.org/wiki/Firmware#Flashing
 
-## Open-Source
+## open-source
 
-Denoting software for which the original source code is made freely available and may be redistributed and modified.  ( https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=Open-Source+definition )
+Denoting software for which the original source code is made freely available and may be redistributed and modified.
 
 ## GPIO
 
@@ -15,3 +15,7 @@ General purpose input/output (GPIO) is a generic pin on an integrated circuit wh
 ## PWM
 
 Pulse-width modulation (PWM) is a modulation process or technique used in most communication systems for encoding the amplitude of a signal right into a pulse width or duration of another signal, usually a carrier signal, for transmission. ( https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=PWM+definition )
+
+## I2C
+
+I2C is a multi-master bus, which means that multiple chips can be connected to the same bus and each one can act as a master by initiating a data transfer. I2C is used in many devices, especially video devices such as computer monitors, televisions and VCRs. ( https://www.google.com/search?q=i2c+definition&newwindow=1&espv=2&biw=1920&bih=1105&source=lnms&sa=X&ved=0ahUKEwj6zP2YxcbLAhUBQBoKHT3zAF8Q_AUIBSgA&dpr=1 )
