@@ -23,4 +23,3 @@ Even though there are a few different ways to program the NodeMCU, we will be us
 
 [^1]: https://nodemcu.com/index_en.html
 [^2]: https://www.arduino.cc/en/Main/Software
-[^3]: https://github.com/nodemcu/nodemcu-devkit-v1.0
