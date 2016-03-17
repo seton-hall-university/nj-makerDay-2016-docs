@@ -23,3 +23,7 @@ I2C is a multi-master bus, which means that multiple chips can be connected to t
 ## 1-Wire
 
 1-Wire is a device communications bus system designed by Dallas Semiconductor Corp. that provides low-speed data, signaling, and power over a single signal. 1-Wire is similar in concept to I²C, but with lower data rates and longer range.
+
+## IDE
+
+An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of a source code editor, build automation tools and a debugger. Most modern IDEs have an intelligent code completion. ( https://en.wikipedia.org/wiki/Integrated_development_environment )
