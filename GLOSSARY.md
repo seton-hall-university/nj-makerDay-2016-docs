@@ -14,4 +14,4 @@ General purpose input/output (GPIO) is a generic pin on an integrated circuit wh
 
 ## PWM
 
-Pulse-width modulation (PWM) is a modulation process or technique used in most communication systems for encoding the amplitude of a signal right into a pulse width or duration of another signal, usually a carrier signal, for transmission.
+Pulse-width modulation (PWM) is a modulation process or technique used in most communication systems for encoding the amplitude of a signal right into a pulse width or duration of another signal, usually a carrier signal, for transmission. ( https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=PWM+definition )
