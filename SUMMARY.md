@@ -15,7 +15,7 @@
        * [Switches](home-automation/switches.md)
        * [Breadboards](home-automation/breadboards.md)
    * [NodeMCU DevKit](home-automation/nodemcu-devkit.md)
-   * [Adafruit HDC1008 Temperature & Humidity Sensor](/home-automation/adafruit-hdc1008.md)
+   * [Temperature & Humidity Sensors](/home-automation/sensors.md)
    * [FTDI Serial TTL-232 USB Cable](https:/www.adafruit.com/products/70)
    * Wire the Circuit
    * The "Sketch"
