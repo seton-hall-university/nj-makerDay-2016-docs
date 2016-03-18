@@ -9,11 +9,11 @@ filename: sensors.md
 
 # Temperature & Humidity Sensors
 
-The sensors that we will be using in our project are either the Adafruit HDC1008 or the Dallas DS18B20. The HDC1008 will measure both temperature and humidity while the DS18B20 only read temperature.
+The sensors that we will be using in our project are either the [Adafruit HDC1008](https://www.adafruit.com/products/2635) or the Dallas DS18B20. The HDC1008 will measure both temperature and humidity while the DS18B20 only read temperature.
 
 ## Adafruit HDC1008 
 
-This I2C digital humidity sensor is a fairly accurate and intelligent alternative to the much simpler [Humidity and Temperature Sensor - SHT15 Breakout](https://www.adafruit.com/products/1638). It has a typical accuracy of ±4% with an operating range that's optimized from 10% to 80% relative humidity (RH). Operation outside this range is still possible - just the accuracy might drop a bit. The temperature output has a typical accuracy of ±0.2°C from -20 ~ 85°C.
+This I2C digital humidity sensor is a fairly accurate and intelligent alternative to the much simpler [Humidity and Temperature Sensor - SHT15 Breakout](https://www.adafruit.com/products/1638). <img src="https://cdn-shop.adafruit.com/970x728/2635-01.jpg" style="float:right; margin:5px 0 5px 5px"> It has a typical accuracy of ±4% with an operating range that's optimized from 10% to 80% relative humidity (RH). Operation outside this range is still possible - just the accuracy might drop a bit. The temperature output has a typical accuracy of ±0.2°C from -20 ~ 85°C.
 
 The HDC1008 sensor chip has 2 address-select pins, so you can have up to 4 shared on a single I2C bus. It's also 3-5V power and logic safe so you don't need any level shifters or regulators to use with a 5V or 3V micro-controller.
 
