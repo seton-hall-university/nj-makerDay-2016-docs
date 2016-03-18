@@ -9,7 +9,9 @@ filename: sketch.md
 
 # The "Sketch"
 
-Programs written using Arduino Software (IDE) are called sketches. These sketches are written in the text editor and are saved with the file extension .ino[^1].
+Programs written using Arduino Software (IDE) are called sketches. These sketches are written in the text editor and are saved with the file extension .ino[^1]. Our sketch uses a couple of .ino files as a package instead of using one long file. The most recent code is available on [GitHub](https://github.com/shuWebDev/nj-makerDay-2016). From the project page, [download the ZIP](https://github.com/shuWebDev/nj-makerDay-2016/archive/master.zip) file by clicking the button on the right hand side.
+
+
 
 ---
 
