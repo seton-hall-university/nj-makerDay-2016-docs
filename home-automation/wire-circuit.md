@@ -37,4 +37,4 @@ If you are using the FTDI cable instead of the USB, then you will also need to a
 | Yellow | TX | 
 | Orange | RX |
 
-Now that everything is wired together, the next step is to program the ESP8266.
+Now that everything is wired together, the next step is to program the ESP8266 with an Arduino Sketch.
