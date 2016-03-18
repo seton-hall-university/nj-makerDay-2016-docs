@@ -15,3 +15,4 @@ filename: wire-circuit.md
 </figure>
 
 The circuit that we are wiring is compromised of two(2) components, the [NodeMCU](nodemcu-devkit.md) and the [HDC1008](sensors.md). We will also need a few jumper wires, a breadboard and a USB or FTDI cable to start. The NodeMCU DevKit makes it easy to program via USB or serial cable, which will also serve as our power supply. 
+
