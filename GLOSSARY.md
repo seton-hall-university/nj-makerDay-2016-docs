@@ -8,6 +8,10 @@
 
 An analog-to-digital converter (ADC, A/D, or A to D) is a device that converts a continuous physical quantity (usually voltage) to a digital number that represents the quantity's amplitude. (https://en.wikipedia.org/wiki/Analog-to-digital_converter)
 
+## BGA
+
+A ball grid array (BGA) is a type of surface-mount packaging (a chip carrier) used for integrated circuits. BGA packages are used to permanently mount devices such as microprocessors. A BGA can provide more interconnection pins than can be put on a dual in-line or flat package. The whole bottom surface of the device can be used, instead of just the perimeter. The leads are also on average shorter than with a perimeter-only type, leading to better performance at high speeds. ( https://en.wikipedia.org/wiki/Ball_grid_array )
+
 ## flashing
 
 Flashing involves the overwriting of existing firmware or data, contained in EEPROM or flash memory modules present in an electronic device, with new data. (https://en.wikipedia.org/wiki/Firmware#Flashing)
@@ -32,6 +36,6 @@ Denoting software for which the original source code is made freely available an
 
 Pulse-width modulation (PWM) is a modulation process or technique used in most communication systems for encoding the amplitude of a signal right into a pulse width or duration of another signal, usually a carrier signal, for transmission. (https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#newwindow=1&q=PWM+definition)
 
-## BGA
+## PCB
 
-A ball grid array (BGA) is a type of surface-mount packaging (a chip carrier) used for integrated circuits. BGA packages are used to permanently mount devices such as microprocessors. A BGA can provide more interconnection pins than can be put on a dual in-line or flat package. The whole bottom surface of the device can be used, instead of just the perimeter. The leads are also on average shorter than with a perimeter-only type, leading to better performance at high speeds. ( https://en.wikipedia.org/wiki/Ball_grid_array )
+A printed circuit board (PCB) mechanically supports and electrically connects electronic components using conductive tracks, pads and other features etched from copper sheets laminated onto a non-conductive substrate. PCBs can be single sided (one copper layer), double sided (two copper layers) or multi-layer (outer and inner layers). Multi-layer PCBs allow for much higher component density. Conductors on different layers are connected with plated-through holes called vias. Advanced PCBs may contain components - capacitors, resistors or active devices - embedded in the substrate. ( https://en.wikipedia.org/wiki/Printed_circuit_board )
