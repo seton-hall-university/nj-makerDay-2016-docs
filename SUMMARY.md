@@ -15,8 +15,8 @@
        * [Switches](home-automation/switches.md)
        * [Breadboards](home-automation/breadboards.md)
    * [NodeMCU DevKit](home-automation/nodemcu-devkit.md)
-   * [Temperature & Humidity Sensors](/home-automation/sensors.md)
+   * [Temperature & Humidity Sensors](home-automation/sensors.md)
    * [FTDI Serial TTL-232 USB Cable](https:/www.adafruit.com/products/70)
-   * Wire the Circuit
+   * [Wire the Circuit](home-automation/wire-circuit.md)
    * The "Sketch"
 
