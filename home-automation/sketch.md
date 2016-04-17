@@ -18,7 +18,7 @@ From the project page, [download the ZIP](https://github.com/shuWebDev/nj-makerD
 <figcaption>Final Sketch in Arduino Software.</figcaption>
 </figure>
 
-
+As you can see, there are a few tabs that have opened with the project. Each one of the tabs contain a small portion of the entire program. The first tab is the main program and "sets up" everything up. 
 
 ---
 
