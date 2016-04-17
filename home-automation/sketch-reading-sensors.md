@@ -11,7 +11,7 @@ filename: sketch-reading-sensors.md
 
 As mentioned previously, the main sketch sets up the program. At the time of this writing, it contains
 
-``` c++
+```c++
 // Libraries
 #include "Arduino.h"
 #include <ArduinoJson.h>
