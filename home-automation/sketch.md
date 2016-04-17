@@ -14,8 +14,8 @@ Programs written using Arduino Software (IDE) are called sketches. These sketche
 From the project page, [download the ZIP](https://github.com/shuWebDev/nj-makerDay-2016/archive/master.zip) file by clicking the button on the right hand side. Unzip the file and open "_reading_sensors.ino_" in the [Arduino Software](https://www.arduino.cc/en/Main/Software). This should open all of the files in the project.
 
 <figure>
-<img src="../assets/images/sketch-all.png" alt="Temperature and Humidity Circuit">
-<figcaption>Temperature and Humidity Circuit</figcaption>
+<img src="../assets/images/sketch-final.png" alt="Temperature and Humidity Circuit">
+<figcaption>Final Sketch in Ardino Software.</figcaption>
 </figure>
 
 
