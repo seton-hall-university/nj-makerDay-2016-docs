@@ -15,7 +15,7 @@ From the project page, [download the ZIP](https://github.com/shuWebDev/nj-makerD
 
 <figure>
 <img src="../assets/images/sketch-final.png" alt="Temperature and Humidity Circuit">
-<figcaption>Final Sketch in Ardino Software.</figcaption>
+<figcaption>Final Sketch in Arduino Software.</figcaption>
 </figure>
 
 
