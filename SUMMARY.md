@@ -19,5 +19,5 @@
    * [FTDI Serial TTL-232 USB Cable](https:/www.adafruit.com/products/70)
    * [Wire the Circuit](home-automation/wire-circuit.md)
    * [The "Sketch"](home-automation/sketch.md)
-       * Main Sketch (reading_sensors)
+       * [Main Sketch (reading_sensors)](home-automation/sketch-reading-sensors.md)
 
