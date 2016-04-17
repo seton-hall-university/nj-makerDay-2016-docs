@@ -14,7 +14,7 @@ The circuit that we are wiring is compromised of two(2) components, the [NodeMCU
 Start by adding your components to the breadboard, as seen in the following diagram.
 
 <figure>
-<img src="../assets/images/shu-temp-hum.svg" alt="Temperature and Humidity Circuit">
+<img src="../assets/images/shu-temp-hum.png" alt="Temperature and Humidity Circuit">
 <figcaption>Temperature and Humidity Circuit</figcaption>
 </figure>
 
