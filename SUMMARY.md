@@ -18,7 +18,7 @@
    * [Temperature & Humidity Sensors](home-automation/sensors.md)
    * [Wire the Circuit](home-automation/wire-circuit.md)
    * [The "Sketch"](home-automation/sketch.md)
-       * Humidity Sketch (humidity.ino)
        * [Main Sketch (reading_sensors)](home-automation/sketch-reading-sensors.md)
            * Humidity Sketch (humidity.ino)
+       * Humidity Sketch (humidity.ino)
 
