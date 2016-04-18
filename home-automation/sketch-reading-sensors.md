@@ -58,13 +58,12 @@ const char* password1 = "password1";
 
 ## The setup() Function
 
-The next part of the main sketch is the ```setup()``` function. It's called when a sketch starts and is used to initialize variables, pin modes, start using libraries, etc. This function will only run once, after each power-up or reset of the Arduino board[^2].
+The next part of the main sketch is the ```setup()``` function. It's called when a sketch starts and is used to initialize variables, pin modes, start using libraries, etc. This function will only run once, after each power-up or reset of the Arduino board[^1].
 
 ```c++
 // Sketch Code
 void setup ( void ) {
   pinMode ( ledWiFi, OUTPUT );
-  //  digitalWrite ( ledWiFi, 1 );
   Serial.begin ( 115200 );
 
   Serial.print("\nChip ID = ");
@@ -77,20 +76,19 @@ void setup ( void ) {
   // Connect to Wifi
   connectWiFi();
 
-  // Setup mDNS
-//  setupDNS();
-
-  // Send the WiFi address out.
-  // NOTE: This isn't sending the IP, just a <blank>
-  // sendWiFiAddress();
-
   Serial.println("\nSetting up HDC100x...");
   Wire.begin(hdc_sda, hdc_scl);
   if (!hdc.begin()) {
     Serial.println("\nCouldn't find sensor!");
     while (1);
   }
+  ...
+  ```
+  
+The ```setup()``` function also tells our web server what to serve when certain URIs are requested.
 
+  ```c++
+  ...
   server.on ( "/", HTTP_GET, handleRoot );
   server.on ( "/file", HTTP_GET, loadIndex );
   server.on ( "/status", HTTP_GET, loadStatus );
@@ -107,30 +105,20 @@ void setup ( void ) {
   server.onNotFound ( handleNotFound );
   server.begin();
   Serial.println ( "\nHTTP server started" );
-
-  //  digitalWrite ( ledWiFi, 0 );
-}
-
-void loop ( void ) {
-  //  digitalWrite ( ledWiFi, 0 );
-  server.handleClient();
-
-  //
-  //  getWiFiAddress();
-  //
-  //  Serial.print("Temp: ");
-  //  Serial.print(getTempCelsius());
-  //  Serial.print("C / ");
-  //  Serial.print(getTempFahrenheit());
-  //  Serial.print("F");
-  //  Serial.print("\tHum: ");
-  //  Serial.println(getHumidityRH());
-  //
-  ////  digitalWrite ( ledWiFi, 1 );
-  ////  delay(180000); // 3 minutes
-  ////  delay(30000); // 30 seconds
-  //  delay(500); // .5 seconds
 }
 ```
 
-[]
+## The loop() Function
+
+The last part of the main sketch is the ```loop()``` function. It loops consecutively, allowing the program to change and respond[^2] to incoming requests. In our case, we're telling the web server we've setup on the ESP8266 to handle client requests.
+
+```c++
+void loop ( void ) {
+  server.handleClient();
+}
+```
+
+#### References
+
+[^1]: http://www.arduino.cc/en/Reference/Setup
+[^2]: http://www.arduino.cc/en/Reference/Loop
