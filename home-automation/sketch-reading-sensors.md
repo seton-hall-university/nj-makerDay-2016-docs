@@ -26,6 +26,9 @@ Feel free to remove any part of the sketch that you will not be using. At a mini
 
 The minimum variable definitions that are need are:
 
+ * WiFi information
+
+
 ```c++
 // Libraries
 #include "Arduino.h"
