@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
 * [Home Automation with the ESP8266](home-automation/README.md)
    * [Circuitry](home-automation/circuitry.md)
    * [Components](home-automation/components.md)
