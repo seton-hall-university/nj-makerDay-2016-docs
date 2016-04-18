@@ -28,7 +28,7 @@ Once you've placed the components on the board, connect the sensor to the ESP826
 | SDA | D6 / GPIO12 |
 
 
-If you are using the FTDI cable instead of the USB, then you will also need to add the following:
+If you are using the [FTDI Serial TTL-232](https://www.adafruit.com/products/70) cable instead of the USB, then you will also need to add the following:
 
 | FTDI | ESP8266 |
 | -- | -- |
