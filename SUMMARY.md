@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [Home Automation with the ESP8266](home-automation/README.md)
 * [Circuitry](home-automation/circuitry.md)
 * [Components](home-automation/components.md)
@@ -16,4 +17,5 @@
 * [The "Sketch"](home-automation/sketch.md)
    * [Main Sketch (reading_sensors)](home-automation/sketch-reading-sensors.md)
    * [Humidity Sketch (humidity.ino)](home-automation/sketch-humidity.md)
+   * Temperature Sketch (temperature.ino)
 
