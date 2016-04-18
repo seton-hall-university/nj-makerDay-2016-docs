@@ -9,7 +9,7 @@ filename: sketch-temperature.md
 
 # Temperature Sketch (temperature.ino)
 
-The ```temperature.ino``` sketch handles reading the temperature sensor. As with the humidity sketch, it also provides data to any client that requests it. 
+The ```temperature.ino``` sketch handles reading the temperature sensor. As with the humidity sketch, it also provides data to any client that requests it. Unlike the humidity sensor, there are a few different ways to present temperature values. In this sketch, we provide three(3): Celsius (the default), Fahrenheit and Kelvin.
 
 ```c++
 // Libraries
