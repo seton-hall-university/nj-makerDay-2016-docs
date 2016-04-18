@@ -9,7 +9,7 @@ filename: sketch-temperature.md
 
 # WiFi Sketch (wifi.ino)
 
-
+The ```wifi.ino``` sketch handles connecting the ESP8266 to an existing WiFi network. If the ESP8266 cannot connect to one of the pre-programmed access points, then it will create one of it's own. As with some of the other sketches, parts of this sketch can be attributed to either official examples or resources on the internet.
 
 ```c++
 // Libraries
