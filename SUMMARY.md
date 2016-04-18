@@ -19,4 +19,5 @@
    * [Wire the Circuit](home-automation/wire-circuit.md)
    * [The "Sketch"](home-automation/sketch.md)
        * [Main Sketch (reading_sensors)](home-automation/sketch-reading-sensors.md)
+           * Humidity Sketch (humidity.ino)
 
