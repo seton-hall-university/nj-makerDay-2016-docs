@@ -9,7 +9,22 @@ filename: sketch-reading-sensors.md
 
 # Main Sketch (reading_sensors.ino)
 
-As mentioned previously, the main sketch sets up the program. At the time of this writing, it contains
+As mentioned previously, the main sketch sets up the program. At the time of this writing, it contains:
+
+ * The libraries that we will use, 
+ * Variable definitions used throughout the program, 
+ * Generic functions and 
+ * The Arduino ```setup()``` and ```loop()``` fuctions.
+
+Feel free to remove any part of the sketch that you will not be using. At a minimum, we will need the following libraries:
+
+ * ```Arduino.h```
+ * ```ESP8266WiFiMulti.h```
+ * ```ESP8266WebServer.h```
+ * ```Adafruit_HDC1000.h```
+ * ```Wire.h```
+
+The minimum variable definitions that are need are:
 
 ```c++
 // Libraries
@@ -42,12 +57,12 @@ const char chipID = ESP.getChipId(); // The ESP's Chip ID
 const char *dnsName = "webdev-esp8266-" + chipID; // DNS Name
 
 // Set WiFi constants
-const char* ssid1     = "theNile";
-const char* password1 = "stereo!3";
-const char* ssid2     = "@400SoAve#";
-const char* password2 = "589ShU!$305";
-const char* ssid3     = "MiFi4620L Jetpack B1A7 Secure";
-const char* password3 = "060388d1";
+const char* ssid1     = "ssid1";
+const char* password1 = "password1";
+const char* ssid2     = "ssid2";
+const char* password2 = "password2";
+const char* ssid3     = "ssid3";
+const char* password3 = "password13";
 
 // Functions
 void setupDNS(void);
