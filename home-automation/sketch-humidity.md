@@ -4,7 +4,7 @@ summary: This document describes the code that we used for our project.
 author: G. L. Clark, II
 date Created: April 17, 2016
 date Modified:{{ file.mtime }}
-filename: sketch-reading-sensors.md
+filename: sketch-humidity.md
 -->
 
 # Humidity Sketch (humidity.ino)
