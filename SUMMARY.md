@@ -18,5 +18,5 @@
    * [Main Sketch (reading_sensors)](home-automation/sketch-reading-sensors.md)
    * [Humidity Sketch (humidity.ino)](home-automation/sketch-humidity.md)
    * [Temperature Sketch (temperature.ino)](home-automation/sketch-temperature.md)
-   * WiFi Sketch (wifi.ino)
+   * [WiFi Sketch (wifi.ino)](home-automation/sketch-wifi.md)
 
