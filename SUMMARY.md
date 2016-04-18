@@ -17,5 +17,5 @@
 * [The "Sketch"](home-automation/sketch.md)
    * [Main Sketch (reading_sensors)](home-automation/sketch-reading-sensors.md)
    * [Humidity Sketch (humidity.ino)](home-automation/sketch-humidity.md)
-   * Temperature Sketch (temperature.ino)
+   * [Temperature Sketch (temperature.ino)](home-automation/sketch-temperature.md)
 
