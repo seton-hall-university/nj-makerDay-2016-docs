@@ -9,7 +9,7 @@ filename: sketch-humidity.md
 
 # Humidity Sketch (humidity.ino)
 
-The ```humidity.ino``` sketch handles reading the humidity sensor. It also provides that data to any client requesting that data. 
+The ```humidity.ino``` sketch handles reading the humidity sensor. It also provides that data to any client requesting it. 
 
 ```c++
 // Libraries
