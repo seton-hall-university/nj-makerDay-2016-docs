@@ -28,7 +28,7 @@ Once you've placed the components on the board, connect the sensor to the ESP826
 | SDA | D6 / GPIO12 |
 
 
-If you are using the [FTDI Serial TTL-232](https://www.adafruit.com/products/70) cable instead of the USB, then you will also need to add the following:
+If you are using the [FTDI serial cable](https://www.adafruit.com/products/70) instead of USB, then you will need to [download and install the Virtual Com port (VCP) drivers](http://www.ftdichip.com/Drivers/VCP.htm). Once the drivers are installed add the following:
 
 | FTDI | ESP8266 |
 | -- | -- |
